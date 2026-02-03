@@ -3,8 +3,8 @@
  * Framework-agnostic CSS utility helpers
  */
 
-@import "__html";
-@import "_prose";
+@import "./__html";
+@import "./_prose";
 @import "@anydigital/breakout-css"; /* after prose to override it */
-@import "_prism";
-@import "_util";
+@import "./_prism";
+@import "./_util";
