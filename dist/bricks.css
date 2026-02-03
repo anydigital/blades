@@ -212,17 +212,17 @@ body a,body table {
       transform: translateX(-50%);
     }
 
+/*** .does-not-exist is used below to avoid !important-s @TODO ***/
+
 /* Respect inline blocks' min-width */
 
-.breakout > img:not(does-not-exist),.breakout > picture:not(does-not-exist),.breakout > figure:not(does-not-exist),.breakout > canvas:not(does-not-exist),.breakout > audio:not(does-not-exist),.breakout > p > img,.breakout > p > picture,.breakout > p > figure,.breakout > p > canvas,.breakout > p > audio {
+.breakout > img:not(does-not-exist):not(.does-not-exist),.breakout > picture:not(does-not-exist):not(.does-not-exist),.breakout > figure:not(does-not-exist):not(.does-not-exist),.breakout > canvas:not(does-not-exist):not(.does-not-exist),.breakout > audio:not(does-not-exist):not(.does-not-exist),.breakout > p > img:not(.does-not-exist),.breakout > p > picture:not(.does-not-exist),.breakout > p > figure:not(.does-not-exist),.breakout > p > canvas:not(.does-not-exist),.breakout > p > audio:not(.does-not-exist) {
       min-width: auto;
     }
 
 /* Tables are so special :( */
 
 .breakout > table:not(does-not-exist):not(.does-not-exist),.breakout > p > table:not(.does-not-exist) {
-      /* .does-not-exist is here to avoid !important below @TODO */
-
       /* Let them full-bleed */
       width: -moz-max-content;
       width: max-content;
