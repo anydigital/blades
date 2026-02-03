@@ -1,6 +1,6 @@
 {
   "name": "@anydigital/bricks",
-  "version": "0.24.1",
+  "version": "0.24.2",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'bricks' for modern web development.",
   "style": "./bricks/bricks.css",
   "exports": {
@@ -27,11 +27,13 @@
   "author": "Anton Staroverov",
   "license": "MIT",
   "devDependencies": {
-    "@anydigital/breakout-css": "^0.11.1",
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.1",
     "postcss-preset-env": "^10.6.0",
     "prettier-plugin-jinja-template": "^2.1.0"
+  },
+  "dependencies": {
+    "@anydigital/breakout-css": "^0.11.1"
   }
 }
