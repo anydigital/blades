@@ -2,13 +2,13 @@
   "name": "@anydigital/bricks",
   "version": "0.24.2",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'bricks' for modern web development.",
-  "style": "./bricks/bricks.css",
+  "style": "./src/bricks.css",
   "exports": {
-    ".": "./bricks/bricks.css",
+    ".": "./src/bricks.css",
     "./dist": "./dist/bricks.css"
   },
   "scripts": {
-    "postcss": "postcss bricks/bricks.css -o dist/bricks.css",
+    "postcss": "postcss src/bricks.css -o dist/bricks.css",
     "build": "npm run postcss -- --no-map",
     "start": "npm run postcss -- --watch",
     "prepublishOnly": "npm run build"

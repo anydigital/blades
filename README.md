@@ -196,11 +196,12 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 The package includes reusable templates in the `bricks/` directory. These are useful for common web development patterns.
 
-### Quick Setup
+### Installation
 
 ```sh
 npm install @anydigital/bricks
-ln -s ./node_modules/@anydigital/bricks/bricks ./YOUR_INCLUDES_DIR/bricks
+cd ./src/_includes
+ln -s ../../node_modules/@anydigital/bricks/src/bricks
 ```
 
 ### Base HTML Template <small>(`__html.*`)</small>
