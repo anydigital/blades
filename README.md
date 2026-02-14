@@ -4,7 +4,7 @@ Framework-agnostic, Tailwind-compatible CSS utilities and single-file `bricks` f
 
 <!--section:css-h2-->
 
-## CSS 'Bricks'
+## CSS 'Bricks' <sub>from https://github.com/anydigital/bricks</sub>
 
 ### Install CSS
 
