@@ -297,9 +297,3 @@ A template `bricks/_gtm.{njk|liquid}` for embedding Google Tag Manager scripts i
 
 - https://github.com/anydigital/bricks/blob/main/bricks/__html.njk
 - https://github.com/anydigital/bricks/blob/main/bricks/__html.liquid
-
-<!--section-->
-
-## License
-
-MIT
