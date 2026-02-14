@@ -1,32 +1,32 @@
 # *Any*bricks
 
-Framework-agnostic CSS utilities and single-file Liquid 'bricks' for modern web development.
-
-## Installation
-
-### Via CDN
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@anydigital/bricks@1/dist/bricks.css" />
-```
-
-### Via npm
-
-```sh
-npm install @anydigital/bricks
-```
-
-Then import in your CSS:
-
-```css
-@import "@anydigital/bricks";
-```
+Framework-agnostic, Tailwind-compatible CSS utilities and single-file `bricks` for modern web development.
 
 <!--section:css-h2-->
 
 ## CSS 'Bricks'
 
-### Overflow Control
+### Install CSS
+
+Via CDN:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@anydigital/bricks@0/dist/bricks.min.css" />
+```
+
+Or import source styles via npm:
+
+```sh
+npm install @anydigital/bricks
+```
+
+```css {data-caption=.css}
+@import "@anydigital/bricks";
+```
+
+### `_base.css` styles
+
+#### Overflow Control
 
 Prevents horizontal overflow and scrolling on the entire page:
 
@@ -39,7 +39,7 @@ body {
 
 This is automatically applied when you include the stylesheet.
 
-### Full Viewport Height
+#### Full Viewport Height
 
 Ensures the body element takes at least the full height of the viewport using dynamic viewport height for better mobile support:
 
@@ -51,7 +51,26 @@ body {
 
 This is automatically applied when you include the stylesheet.
 
-### Typography Enhancements
+#### Flexbox Layout
+
+Sets up a flexible column layout structure:
+
+```css
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex-grow: 1;
+}
+```
+
+The body becomes a flex container with column direction, and `main` elements automatically grow to fill available space. This is useful for creating sticky footers and full-height layouts.
+
+This is automatically applied when you include the stylesheet.
+
+#### Typography Enhancements
 
 Improves text rendering and readability:
 
@@ -69,7 +88,7 @@ body {
 
 This is automatically applied when you include the stylesheet.
 
-### Prose Styling
+### `_prose.css` Tailwind Typography enhancements
 
 The `.prose` class provides enhanced typography for article content and long-form text with container-like behavior:
 
@@ -112,7 +131,7 @@ The `.prose` class provides enhanced typography for article content and long-for
 
 - Code blocks with `data-caption` attribute display the caption above the code block (styled with 50% opacity, italic, and `1.5em` bottom margin)
 
-### Code Highlighting
+### `_prism.css` enhancements
 
 Includes specialized styling for Prism.js, specifically focusing on treeview components:
 
@@ -122,7 +141,7 @@ Includes specialized styling for Prism.js, specifically focusing on treeview com
 - Last-child entry names have no `::before` pseudo-element
 - Supports complex file tree visualizations out of the box
 
-### Utilities
+### `_util.css` helpers
 
 #### Scrollbar Inversion
 
@@ -159,26 +178,7 @@ This ensures the icon and the text stay together on the same line. If you need n
 
 This is automatically included when you import the stylesheet.
 
-### Flexbox Layout
-
-Sets up a flexible column layout structure:
-
-```css
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-body > main {
-  flex-grow: 1;
-}
-```
-
-The body becomes a flex container with column direction, and `main` elements automatically grow to fill available space. This is useful for creating sticky footers and full-height layouts.
-
-This is automatically applied when you include the stylesheet.
-
-### Breakout CSS
+### `breakout-css` included
 
 Includes [breakout-css](https://github.com/anydigital/breakout-css) utilities for breaking out images and figures beyond their container width. Use the `.breakout` class to allow elements to extend beyond their parent container:
 
@@ -194,9 +194,9 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 ## Universal Template 'Bricks' <small>(`.njk` & `.liquid`)</small> <sub>from https://github.com/anydigital/bricks</sub>
 
-The package includes reusable templates in the `bricks/` directory. These are useful for common web development patterns.
+The package includes reusable templates in the `./src/bricks/` directory. These are useful for common web development patterns.
 
-### Installation
+### Install Templates
 
 ```sh
 npm install @anydigital/bricks
