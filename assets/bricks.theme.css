@@ -1,0 +1,23 @@
+h1 {
+  font-size: 3rem;
+}
+
+hr {
+  margin-block: 2rem;
+}
+
+pre {
+  small {
+    opacity: 50%;
+    font-weight: lighter;
+  }
+}
+
+table {
+  th {
+    font-weight: bold;
+  }
+  pre {
+    margin-bottom: 0.25rem;
+  }
+}

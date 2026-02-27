@@ -3,11 +3,13 @@
  * Framework-agnostic CSS utility helpers
  */
 
-/* Prevent horizontal overflow and scrolling, modern way */
-
-html,
-body {
+html {
+  /* Prevent horizontal overflow and scrolling, modern way */
   overflow-x: clip;
+
+  /* Font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -17,181 +19,25 @@ body {
   /* Make the body a flex container with column layout; main fills space */
   display: flex;
   flex-direction: column;
-}
-
-body  > main {
+  > main {
     flex-grow: 1;
   }
 
-body {
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Hyphenation */
   hyphens: auto;
   /* Links and tables are better (safer) without hyphenation */
-}
-
-body a,body table {
+  a,
+  table {
     hyphens: none;
   }
-
-.prose {
-  /* Container-like behavior with auto margins */
-  width: 100%;
-  margin-inline: auto;
-
-  /* Helper for multi-line subtitles */
 }
 
-.prose sub {
-    vertical-align: top;
-    bottom: -0.05em;
-    line-height: 1.1;
-    font-weight: 300;
-    /* Workaround to prevent underline inside links */
-    display: inline-block;
-    width: 100%;
-  }
+pre {
+  padding: 1rem 1.5rem;
+  padding-inline-end: 2rem;
+}
 
-.prose a {
-    text-underline-offset: 0.1em;
-    text-decoration-thickness: 1px;
-    /* Don't underline links that point to anchors */
-  }
-
-.prose a[href^="#"] {
-      text-decoration: none;
-    }
-
-.prose a:hover {
-      text-decoration-thickness: 2px;
-    }
-
-/* Helper to insert icons in links */
-
-.prose a i {
-      height: 1em;
-      margin-right: 0.25em;
-      font-style: normal;
-      /* Workaround to prevent underline */
-      display: inline-block;
-    }
-
-.prose a i img {
-        height: 100%;
-        margin: 0;
-        position: relative;
-        bottom: -0.15em;
-      }
-
-.prose img:not(:where(.prose > img,.prose > p > img)) {
-      margin-top: 0;
-      margin-bottom: 1em;
-    }
-
-/* Support for markdown anchors */
-
-.prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6 {
-    position: relative;
-  }
-
-.prose h1 .header-anchor,.prose h2 .header-anchor,.prose h3 .header-anchor,.prose h4 .header-anchor,.prose h5 .header-anchor,.prose h6 .header-anchor {
-      display: none;
-      position: absolute;
-      right: 100%;
-      top: 0;
-      padding-right: 0.2ch;
-      color: rgba(0, 0, 0, 0.25);
-    }
-
-.prose h1:hover .header-anchor,.prose h2:hover .header-anchor,.prose h3:hover .header-anchor,.prose h4:hover .header-anchor,.prose h5:hover .header-anchor,.prose h6:hover .header-anchor {
-        display: block;
-      }
-
-/* Support for `breakout-css` headings */
-
-.prose h1:hover::before {
-        margin-right: 1.5ch !important;
-      }
-
-.prose h2:hover::before {
-        margin-right: 1.5ch !important;
-      }
-
-.prose h3:hover::before {
-        margin-right: 1.5ch !important;
-      }
-
-.prose h4:hover::before {
-        margin-right: 1.5ch !important;
-      }
-
-.prose h5:hover::before {
-        margin-right: 1.5ch !important;
-      }
-
-.prose h6:hover::before {
-        margin-right: 1.5ch !important;
-      }
-
-.prose h1 {
-    margin-bottom: 0.5em !important;
-  }
-
-.prose h1 sub {
-      font-size: 50%;
-    }
-
-.prose th,.prose td {
-    /* Keep extra space on the right for better horizontal scroll on mobile */
-    padding: 1rem 2rem 1rem 0;
-    vertical-align: top;
-    /* Workaround to widen particular columns */
-  }
-
-.prose th hr,.prose td hr {
-      width: 12ch;
-      height: 0;
-      margin: 0;
-      visibility: hidden;
-      /* &.ch16 {
-        width: 16ch;
-      } */
-    }
-
-/* Workaround for headings in Markdown tables */
-
-.prose th big,.prose td big {
-      font-weight: bold;
-    }
-
-.prose th {
-    vertical-align: bottom;
-  }
-
-.prose blockquote {
-    font-weight: 300;
-  }
-
-.prose blockquote  + figcaption {
-      margin-top: -1em;
-      text-align: right;
-      font-style: italic;
-      font-weight: 300;
-    }
-
-.prose blockquote + figcaption::before {
-        content: "—";
-        margin-right: 0.25em;
-      }
-
-.prose code[data-caption]::before {
-      content: attr(data-caption);
-      display: block;
-      margin-bottom: 1.5em;
-      opacity: 0.5;
-      font-style: italic;
-    }
+/* @import "./_prose"; */
 
 /* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
 
@@ -200,11 +46,18 @@ body a,body table {
   padding-inline: 10%;
   max-width: calc(10% + 65ch + 10%);
 
-  /* Direct children, or wrapped in <p> for Markdown support */
-}
-
-.breakout > img:not(does-not-exist):not(.does-not-exist),.breakout > picture:not(does-not-exist):not(.does-not-exist),.breakout > figure:not(does-not-exist):not(.does-not-exist),.breakout > canvas:not(does-not-exist):not(.does-not-exist),.breakout > audio:not(does-not-exist):not(.does-not-exist),.breakout > table:not(does-not-exist):not(.does-not-exist),.breakout > pre:not(does-not-exist):not(.does-not-exist),.breakout > iframe:not(does-not-exist):not(.does-not-exist),.breakout > object:not(does-not-exist):not(.does-not-exist),.breakout > embed:not(does-not-exist):not(.does-not-exist),.breakout > video:not(does-not-exist):not(.does-not-exist),.breakout > .breakout-item:not(does-not-exist),.breakout > .breakout-item-max:not(does-not-exist),.breakout > p > img:not(.does-not-exist),.breakout > p > picture:not(.does-not-exist),.breakout > p > figure:not(.does-not-exist),.breakout > p > canvas:not(.does-not-exist),.breakout > p > audio:not(.does-not-exist),.breakout > p > table:not(.does-not-exist),.breakout > p > pre:not(.does-not-exist),.breakout > p > iframe:not(.does-not-exist),.breakout > p > object:not(.does-not-exist),.breakout > p > embed:not(.does-not-exist),.breakout > p > video:not(.does-not-exist),.breakout > p > .breakout-item,.breakout > p > .breakout-item-max {
-      width: -moz-fit-content;
+  /* Breakout direct children only */
+  & > * {
+    &:is(
+      table,
+      pre,
+      figure, video, iframe, canvas,
+      /* Only breakout img/picture wrapped in <p> to avoid breaking badges, etc. */
+      p > img, p > picture,
+      /* Custom utility classes for other tags that need to be broken out */
+      .breakout-item,
+      .breakout-item-max
+    ) {
       width: fit-content;
       min-width: 100%;
       max-width: 125%;
@@ -212,19 +65,14 @@ body a,body table {
       transform: translateX(-50%);
     }
 
-/*** .does-not-exist is used below to avoid !important-s @TODO ***/
-
-/* Respect inline blocks' min-width */
-
-.breakout > img:not(does-not-exist):not(.does-not-exist),.breakout > picture:not(does-not-exist):not(.does-not-exist),.breakout > figure:not(does-not-exist):not(.does-not-exist),.breakout > canvas:not(does-not-exist):not(.does-not-exist),.breakout > audio:not(does-not-exist):not(.does-not-exist),.breakout > p > img:not(.does-not-exist),.breakout > p > picture:not(.does-not-exist),.breakout > p > figure:not(.does-not-exist),.breakout > p > canvas:not(.does-not-exist),.breakout > p > audio:not(.does-not-exist) {
+    /* Respect img/picture min-width */
+    &:is(p > img, p > picture) {
       min-width: auto;
     }
 
-/* Tables are so special :( */
-
-.breakout > table:not(does-not-exist):not(.does-not-exist),.breakout > p > table:not(.does-not-exist) {
+    /* Tables are so special :( */
+    &:is(table) {
       /* Let them full-bleed */
-      width: -moz-max-content;
       width: max-content;
       min-width: auto;
       max-width: 100vw;
@@ -236,147 +84,71 @@ body a,body table {
       -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
     }
 
-/* Max out the width of the element */
-
-.breakout > .breakout-item-max:not(does-not-exist),.breakout > p > .breakout-item-max {
+    /* Max out the width of the element */
+    &.breakout-item-max {
       width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */
     }
+  }
+}
 
-.breakout-headings h2:not([class]),.breakout-headings h3:not([class]),.breakout-headings h4:not([class]),.breakout-headings hr {
+.breakout-all > * {
+  &:is(h2, h3, h4, hr):not([class]) {
     position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: lightgray;
+      opacity: 50%;
+    }
   }
 
-.breakout-headings h2:not([class])::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 5%);
-    }
-
-.breakout-headings h3:not([class])::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 5%);
-    }
-
-.breakout-headings h4:not([class])::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 5%);
-    }
-
-.breakout-headings hr:not(.does-not-exist)::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 5%);
-    }
-
-.breakout-headings h2:not([class])::before {
+  &:is(h2, h3, h4):not([class]) {
+    &::before {
       width: 10em;
       right: 100%;
       margin-right: 1rem;
-      height: 0.3em;
+      height: 0.25em;
       top: 50%;
       transform: translateY(-50%);
-      background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 10%),
-        rgba(0, 0, 0, 5%) 10%,
-        transparent
-      );
+      background: linear-gradient(to left, lightgray, gainsboro 10%, transparent);
     }
 
-.breakout-headings h3:not([class])::before {
-      width: 10em;
-      right: 100%;
-      margin-right: 1rem;
-      height: 0.3em;
-      top: 50%;
-      transform: translateY(-50%);
-      background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 10%),
-        rgba(0, 0, 0, 5%) 10%,
-        transparent
-      );
+    &:where(hr + &) {
+      &::before {
+        display: none !important;
+      }
     }
-
-.breakout-headings h4:not([class])::before {
-      width: 10em;
-      right: 100%;
-      margin-right: 1rem;
-      height: 0.3em;
-      top: 50%;
-      transform: translateY(-50%);
-      background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 10%),
-        rgba(0, 0, 0, 5%) 10%,
-        transparent
-      );
-    }
-
-.breakout-headings hr {
-    height: 0.75rem;
+  }
+  &:is(hr) {
+    height: 0.5rem;
     border: none;
     overflow: visible;
-  }
 
-.breakout-headings hr::before {
+    &::before {
       width: 100vw;
       left: 50%;
       height: 100%;
       transform: translateX(-50%);
     }
-
-.breakout-headings hr + h2::before {
-      display: none !important;
-    }
-
-.breakout-headings hr + h3::before {
-      display: none !important;
-    }
-
-.breakout-headings hr + h4::before {
-      display: none !important;
-    }
-
-/* after prose to override it */
-
-/* Prism.js */
-
-.token.treeview-part .entry-line {
-    width: 2.5em !important;
-    opacity: 25%;
   }
-
-.token.treeview-part .entry-name:last-child {
-    opacity: 50%;
-  }
-
-.token.treeview-part .entry-name:last-child::before {
-      display: none !important;
-    }
-
-/* Utility classes and fixes */
-
-/* Fix the scrollbar color when inverted */
-
-.invert ::-webkit-scrollbar {
-    filter: invert(1) !important;
-  }
-
-/* Workaround for icon to stay with text in links */
-
-a.whitespace-nowrap {
-  white-space: nowrap;
-  /* Fix for Safari :( why Safari, why? */
-  display: inline-block;
 }
 
-a.whitespace-nowrap span {
-    white-space: normal;
+/* @import "./_prism"; */
+
+/* @import "./_util"; */
+
+table.borderless {
+  td {
+    border: none;
   }
+}
+
+/* Favicons in links @TODO: add to tricks-wiki */
+
+a > i > img {
+  max-height: 1.25em;
+  margin-top: calc(-0.25em / 2);
+  margin-inline-end: 0.25em;
+}
