@@ -1,7 +1,10 @@
-/* Prevent horizontal overflow and scrolling, modern way */
-html,
-body {
+html {
+  /* Prevent horizontal overflow and scrolling, modern way */
   overflow-x: clip;
+
+  /* Font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -15,8 +18,7 @@ body {
     flex-grow: 1;
   }
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Hyphenation */
   hyphens: auto;
   /* Links and tables are better (safer) without hyphenation */
   a,
