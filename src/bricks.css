@@ -3,7 +3,7 @@
  * Framework-agnostic CSS utility helpers
  */
 
-@import "./_base";
+@import "./_classless";
 /* @import "./_prose"; */
 @import "./breakout";
 /* @import "./_prism"; */

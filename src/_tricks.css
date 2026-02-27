@@ -1,6 +1,12 @@
+table.borderless {
+  td {
+    border: none;
+  }
+}
+
 /* Favicons in links @TODO: add to tricks-wiki */
 a > i > img {
-  max-height: 1.2em;
-  margin-top: -0.1em;
-  margin-right: 0.25em;
+  max-height: 1.25em;
+  margin-top: calc(-0.25em / 2);
+  margin-inline-end: 0.25em;
 }

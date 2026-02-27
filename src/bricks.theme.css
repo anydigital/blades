@@ -1,0 +1,15 @@
+pre {
+  small {
+    opacity: 50%;
+    font-weight: lighter;
+  }
+}
+
+table {
+  th {
+    font-weight: bold;
+  }
+  pre {
+    margin-bottom: 0.25rem;
+  }
+}

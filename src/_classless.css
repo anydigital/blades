@@ -26,3 +26,8 @@ body {
     hyphens: none;
   }
 }
+
+pre {
+  padding: 1rem 1.5rem;
+  padding-inline-end: 2rem;
+}
