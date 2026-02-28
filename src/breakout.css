@@ -30,7 +30,8 @@
     }
 
     /* Tables are so special :( */
-    &:is(table) {
+    &:is(table):not(.does-not-exist) {
+      /* @TODO: add postcss's `:not(.does-not-exist)` to tricks-wiki */
       /* Let them full-bleed */
       width: max-content;
       min-width: auto;
@@ -41,6 +42,10 @@
       display: block;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+
+      td {
+        padding-inline-start: 0;
+      }
     }
 
     /* Max out the width of the element */
@@ -58,8 +63,8 @@
       content: "";
       display: block;
       position: absolute;
-      background: lightgray;
-      opacity: 50%;
+      background: gray;
+      opacity: 12.5%;
     }
   }
 
@@ -71,7 +76,7 @@
       height: 0.25em;
       top: 50%;
       transform: translateY(-50%);
-      background: linear-gradient(to left, lightgray, gainsboro 10%, transparent);
+      background: linear-gradient(to left, gray, transparent);
     }
 
     &:where(hr + &) {
