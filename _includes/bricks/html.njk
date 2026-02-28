@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <link rel="icon" href="{{ site.favicon | d('/favicon.ico') }}" />
     <title>
       {{- title | strip_html ~ ' | ' if title -}}
       {{- site.title -}}
     </title>
-    <link rel="icon" href="/favicon.ico" />
+    <meta name="description" content="{{ site.description }}" />
 
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href }}" />
