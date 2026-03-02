@@ -12,8 +12,7 @@
       table,
       pre,
       figure, video, iframe, canvas,
-      /* Only breakout img/picture wrapped in <p> to avoid breaking badges, etc. */
-      p > img, p > picture,
+      img, picture,
       /* Custom utility classes for other tags that need to be broken out */
       .breakout-item,
       .breakout-item-max
@@ -26,7 +25,7 @@
     }
 
     /* Respect img/picture min-width */
-    &:is(p > img, p > picture) {
+    &:is(img, picture) {
       min-width: auto;
     }
 

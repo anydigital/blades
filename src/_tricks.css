@@ -30,6 +30,12 @@ h6 {
   }
 }
 
+/* Helper to handle icons in links */
+a > i {
+  margin-inline-end: 0.375ch; /* =3/8 */
+  font-style: normal;
+}
+
 /* Favicons in links @TODO: add to tricks-wiki */
 a[data-has-favicon] {
   display: inline-block;
@@ -37,7 +43,7 @@ a[data-has-favicon] {
   > img {
     max-height: 1.25em;
     margin-top: calc(-0.25em / 2);
-    margin-inline-end: 0.25em;
+    margin-inline-end: 0.375ch; /* =3/8 */
 
     /* for tw-typography (.prose) */
     display: inline-block;
