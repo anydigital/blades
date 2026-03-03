@@ -63,10 +63,9 @@ a[data-has-favicon] {
 /* Jump to top trick */
 [data-jump-to="top"] {
   position: fixed;
-  right: 0;
   bottom: 0;
-  padding-block: 50vh 0.75rem;
-  padding-inline-end: 0.25rem;
+  right: 0;
+  padding-top: 50vh;
   opacity: 25%;
 
   &:hover {

@@ -30,11 +30,13 @@ table {
   }
 }
 
-[data-jump-to] {
-  color: black;
-  font-size: 0.75rem;
-
+[data-jump-to="top"] {
   > i {
+    display: inline-block;
+    padding: 0.25rem;
+    margin: 0.5rem;
+    font-size: 0.75rem;
+    color: black;
     border-color: black;
   }
 }
