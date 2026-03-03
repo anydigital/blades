@@ -1,6 +1,6 @@
 # `bricks`<sub><sup>`[.css|.njk|.liquid]`</sup></sub>
 
-Framework-agnostic, Tailwind-compatible CSS utilities and single-file `bricks` for modern web development.
+Graceful, semantic CSS extension for Pico or Tailwind, with Nunjucks/Liquid batteries included 🥷
 
 <!--section:css-h2-->
 
