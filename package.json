@@ -1,6 +1,6 @@
 {
   "name": "@anydigital/bricks",
-  "version": "0.27.0-alpha.7",
+  "version": "0.27.0-alpha.8",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'bricks' for modern web development.",
   "style": "./src/bricks.css",
   "exports": {

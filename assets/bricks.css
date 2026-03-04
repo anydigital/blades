@@ -252,11 +252,18 @@ a[data-has-favicon] {
 /* Table of contents */
 
 [data-is-toc] {
+  font-size: 87.5%;
+
   a {
     text-decoration: none;
   }
   > ul {
-    columns: 2;
-    font-size: 90%;
+    columns: 30ch auto; /* 2 cols max for 65ch container */
   }
+}
+
+/* @TODO: to TRICKS */
+
+.columns {
+  columns: 20ch auto; /* 3 cols max for 65ch container */
 }
