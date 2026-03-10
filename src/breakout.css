@@ -30,7 +30,7 @@
     }
 
     /* <!--section:table-->
-    ### Responsive tables without wrapper
+    ### Responsive table without wrapper
     ```css */
     &:is(table):not(.does-not-exist) {
       /* Let them full-bleed */
