@@ -29,7 +29,7 @@
       min-width: auto;
     }
 
-    /* <!--section:responsive-table-without-wrapper-->
+    /* <!--section:css,responsive-table-without-wrapper-->
     ### Responsive tables without wrapper
     ```css */
     &:is(table):not(.does-not-exist) {
