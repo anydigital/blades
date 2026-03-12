@@ -83,8 +83,8 @@ small {
       min-width: auto;
     }
 
-    /* <!--section:responsive-table-without-wrapper-->
-    ### Responsive tables without wrapper
+    /* <!--section:table-->
+    ### Responsive table without wrapper
     ```css */
     &:is(table):not(.does-not-exist) {
       /* Let them full-bleed */
@@ -176,8 +176,26 @@ small {
   }
 }
 
+/* <!--section:table-->
+### Wider columns
+
+Simply insert `<hr>` to forcibly widen too narrow columns (especially useful in markdown):
+
+```html
+<table>
+  <tr>
+    <th>Title <hr> </th>
+    <th>Description</th>
+  </tr>
+  ...
+</table>
+```
+
+How it works:
+
+```css */
+
 table {
-  /* Workaround to widen particular columns @TODO: add to tricks-wiki */
   th {
     hr {
       width: 12ch; /* min ~65/12 = ~5 cols */
@@ -187,6 +205,21 @@ table {
     }
   }
 }
+
+/*```
+<!--section--> */
+
+/* <!--section:table-->
+### Borderless table
+
+`.borderless` removes all default borders:
+
+```html
+<table class="borderless">
+  ...
+</table>
+```
+<!--section--> */
 
 table.borderless {
   th,
@@ -225,7 +258,7 @@ h6 {
 
 a > i {
   display: inline-block;
-  margin-inline-end: 0.375ch; /* =3/8 */
+  /* margin-inline-end: 0.375ch; safer to use &nbsp;? */ /* =3/8 */
   font-style: normal;
 }
 

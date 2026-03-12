@@ -29,8 +29,8 @@
       min-width: auto;
     }
 
-    /* <!--section:responsive-table-without-wrapper-->
-    ### Responsive tables without wrapper
+    /* <!--section:table-->
+    ### Responsive table without wrapper
     ```css */
     &:is(table):not(.does-not-exist) {
       /* Let them full-bleed */
