@@ -6,7 +6,7 @@
 
 <big>Use with Pico, Tailwind, or any other framework.</big>
 
-Nunjucks/Liquid batteries included (for Build Awesome/11ty, Jekyll, etc.) 🥷
+Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--section:css-h2-->
 
