@@ -1,6 +1,4 @@
-{# <!--section:docs-->
-### Nunjucks version
-```jinja2 #}
+{# <!--section:docs-->```jinja2 #}
 <!doctype html>
 <html lang="{{ site.lang | d('en') }}">
   <head>
@@ -41,7 +39,7 @@
 
 #### How to use in your layout
 
-```jinja2
+```jinja2 {data-caption=default.njk}
 {% extends 'blades/html.njk' %}
 
 {% block body %}
