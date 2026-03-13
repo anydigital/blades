@@ -4,7 +4,6 @@
 
 <hgroup>A framework-agnostic,
 class-light CSS blade kit.</hgroup>
-
 <big>Use with Pico, Tailwind, or any other framework.</big>
 Nunjucks/Liquid batteries included (for Build Awesome/11ty/Jekyll) 🥷
 
