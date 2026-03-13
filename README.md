@@ -6,6 +6,8 @@
 
 <big>Use with Pico, Tailwind, or any other framework.</big>
 
+<!--section-->
+
 Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--section:css-h2-->
