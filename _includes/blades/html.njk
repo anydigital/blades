@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
     <link rel="icon" href="{{ site.favicon | d('/favicon.ico') }}" />
     <title>
-      {{- title | striptags ~ ' | ' if title -}}
+      {{- title | string | striptags ~ ' | ' if title -}}
       {{- site.title -}}
     </title>
     <meta name="description" content="{{ description | d(site.description) }}" />
@@ -48,5 +48,9 @@
 ```
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_includes/default.njk
+
+#### Tricks
+
+- `title | string` avoids error with `| striptags` when you pass a pure number
 
 <!--section--> #}
