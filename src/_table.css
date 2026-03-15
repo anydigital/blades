@@ -35,7 +35,7 @@ table {
 ---
 ### Borderless table
 
-`.borderless` removes all default borders:
+`<table class="borderless">` removes all default borders:
 | Less |            | Borders |
 | ---- | ---------- | ------- |
 |      | ↖ ↗<br>↙ ↘ |         |
@@ -43,9 +43,6 @@ table {
 
 {.borderless}
 
-```html
-<table class="borderless">...</table>
-```
 Living example: https://bladeswitch.com/#minimal-dependencies table
 <!--section--> */
 table.borderless {
