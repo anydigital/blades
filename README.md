@@ -48,7 +48,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 ### Install <small>CSS blades</small>
 
-<mark>Option 1.</mark> Load from CDN:
+<mark>Option 1.</mark> From CDN:
 
 <!--prettier-ignore-->
 ```html
@@ -56,13 +56,15 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.theme.min.css" rel="stylesheet" /><!-- optional -->
 ```
 
-<mark>Option 2.</mark> Import sources via npm:
+<mark>Option 2.</mark> Via npm:
 
 ```sh
 npm install @anydigital/blades
 ```
 
-```css {data-caption="in YOUR .css:"}
+Then import in your .css:
+
+```css
 @import "@anydigital/blades";
 @import "@anydigital/blades.theme"; /* optional */
 ```
