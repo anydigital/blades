@@ -40,11 +40,22 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
   <p>inspired by Pico.css</p>
 </hgroup>
 
-<big class="columns">
+<p><big class="columns">
 
 - [Table <small>blades</small>](https://blades.ninja/table)
 
-</big>
+</big></p>
+
+### Install options
+
+<mark>1.</mark> from CDN:
+
+<!--prettier-ignore-->
+```html
+<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.theme.min.css" rel="stylesheet" />
+<!-- (optional theme) -->
+```
 
 ---
 
@@ -73,12 +84,6 @@ Featured by:
 ## CSS 'blades' <br><sub>from https://github.com/anydigital/blades</sub> <a id="blades"></a>
 
 ### Install CSS
-
-Via CDN:
-
-```html
-<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@0/dist/blades.min.css" rel="stylesheet" />
-```
 
 Or import source styles via npm:
 

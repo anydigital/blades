@@ -2,12 +2,11 @@
   "name": "@anydigital/blades",
   "version": "0.27.0-alpha.16",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
-  "style": "./src/blades.css",
+  "style": "./assets/blades.css",
   "exports": {
     ".": "./src/blades.css",
     "./theme": "./src/blades.theme.css",
-    "./unreduce-motion": "./src/_unreduce-motion.css",
-    "./dist": "./dist/blades.css"
+    "./unreduce-motion": "./src/_unreduce-motion.css"
   },
   "scripts": {
     "postcss": "postcss './src/!(_)*.css' --dir ./assets",
