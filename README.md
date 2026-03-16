@@ -10,7 +10,69 @@
 
 Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
+---
+
+<!--section:index-->
+
+<hgroup>
+  <small>Open-source</small>
+  <h2>Living examples</h2><i></i>
+</hgroup>
+
+<ul class="grid">
+  <li>
+    <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
+      <big>Blades with Tailwind</big><br>
+      using Eleventy and Nunjucks <br>
+      <small>(Build Awesome Starter)</small>
+    </a>
+  </li>
+  <li>
+    <a role="button" class="outline" href="https://github.com/anydigital/bladeswitch">
+      <big>Blades with Pico</big><br>
+      using Jekyll and Liquid <br>
+      <small>(Bladeswitch Starter)</small>
+    </a>
+  </li>
+</ul>
+
+---
+
+<hgroup>
+  <small>Class-light</small>
+  <h2>CSS blades</h2>
+  <p>inspired by Pico.css</p>
+</hgroup>
+
+<big class="columns">
+
+- [Table <small>blades</small>](https://blades.ninja/table)
+
+</big>
+
+---
+
+<hgroup>
+  <small>Nunjucks / Liquid</small>
+  <h2>HTML blades</h2>
+  <p>for 11ty/Build Awesome, Jekyll, etc.</p>
+</hgroup>
+
+<big class="columns">
+
+- [Starter HTML <small>blade</small>](https://blades.ninja/html)
+
+</big>
+
+---
+
+Featured by:
+
+- https://github.com/uhub/awesome-css
+
 <!--section:css-h2-->
+
+---
 
 ## CSS 'blades' <br><sub>from https://github.com/anydigital/blades</sub> <a id="blades"></a>
 
