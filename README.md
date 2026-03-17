@@ -25,7 +25,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 - [Typography](https://blades.ninja/css/typography/)
   - [Table](https://blades.ninja/css/table/)
   - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
-  - Header anchors
+  - Heading anchors
   - Link [fav]icons
   - List markers {data-marker=🥷}
   - [Code](https://blades.ninja/css/code/)
