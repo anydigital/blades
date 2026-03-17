@@ -1,5 +1,4 @@
-/* <!--section:code-->
-```css */
+/* <!--section:code-->```css */
 .breakout,
 .breakout-all {
   /* Prepare the container for breakout elements */
@@ -80,7 +79,7 @@
     }
   }
 }
-/*``` <!--section:docs-->
+/*```<!--section:docs-->
 Framework-agnostic utilities for breaking out images and figures beyond their container width.
 
 Use the `.breakout` class to allow elements to extend beyond their parent container:

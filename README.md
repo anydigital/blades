@@ -96,11 +96,40 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
   <p>for 11ty/Build Awesome, Jekyll, etc.</p>
 </hgroup>
 
-<big class="columns">
+<big>
 
-- [Starter HTML <small>blade</small>](https://blades.ninja/html)
+- [Base HTML <small>blade</small>](https://blades.ninja/html/)
+- [Links <small>blade</small>](https://blades.ninja/html/links/)
+- [Google Tag Manager <small>blade</small>](https://blades.ninja/html/gtm/)
+
+{.columns}
 
 </big>
+
+<details><summary role="button" class="outline">Install HTML blades</summary>
+
+```sh
+npm install @anydigital/blades
+cd ./_includes  # or where your includes dir is
+ln -s ../node_modules/@anydigital/blades/_includes/blades
+```
+
+That's it! Now you can use HTML blades in your templates like this:
+
+```jinja2
+{% extends 'blades/html.njk' %}
+{% include 'blades/gtm.njk' %}
+```
+
+or:
+
+```liquid
+{% include blades/html.liquid %}
+{% include blades/gtm.liquid for_body=true %}
+{% render blades/links, links: site.links, current_url: page.url %}
+```
+
+</details>
 
 ---
 
@@ -108,47 +137,7 @@ Featured by:
 
 - https://github.com/uhub/awesome-css
 
-<!--section:njk-liquid-h2-->
-
 ---
-
-## Universal Template 'blades' <small>(`.njk` & `.liquid`)</small> <br><sub>from https://github.com/anydigital/blades</sub>
-
-The package includes reusable templates in the `./src/blades/` directory. These are useful for common web development patterns.
-
-### Install Templates
-
-```sh
-npm install @anydigital/blades
-cd ./src/_includes
-ln -s ../../node_modules/@anydigital/blades/src/blades
-```
-
-### Navigation <small>(`_nav.*`)</small>
-
-A navigation template `blades/_nav.{njk|liquid}` that renders a list of navigation links with proper accessibility attributes.
-
-**Parameters:**
-
-- `nav_pages` - Array of navigation page objects with `url` and `title` properties
-- `current_url` - The URL of the current page (used to set `aria-current="page"`)
-
-**Usage example with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually):**
-
-```liquid {data-caption="in .liquid:"}
-{% assign nav_pages = collections.all | eleventyNavigation %}
-{% render 'blades/_nav', nav_pages: nav_pages, current_url: page.url %}
-```
-
-**Output:**
-
-```html
-<nav>
-  <a href="/">Home</a>
-  <a href="/about" aria-current="page">About</a>
-  <a href="/contact">Contact</a>
-</nav>
-```
 
 <details><summary>
 

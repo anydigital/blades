@@ -1,3 +1,4 @@
+{% comment %} <!--section:code-->```liquid {% endcomment %}
 <ul>
   {%- for link in links %}
     <li>
@@ -8,9 +9,19 @@
     </li>
   {%- endfor %}
 </ul>
+{% # prettier-ignore %}
+{% comment %}```
+<!--section:docs-->
+Usage example with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually):
 
-{%- comment %}
-  Compatible with:
-  - https://picocss.com/docs/nav
-  - https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually
-{%- endcomment %}
+```liquid
+{% assign links = collections.all | eleventyNavigation %}
+{% render blades/links, links: links, current_url: page.url %}
+```
+
+Usage example inside Pico's Navar:
+
+```jinja2
+TBD
+```
+<!--section--> {% endcomment %}
