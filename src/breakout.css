@@ -1,5 +1,4 @@
-/* <!--section:docs-->
-Framework-agnostic utilities for breaking out images and figures:
+/* <!--section:code-->
 ```css */
 .breakout,
 .breakout-all {
@@ -81,4 +80,16 @@ Framework-agnostic utilities for breaking out images and figures:
     }
   }
 }
-/*``` <!--section--> */
+/*``` <!--section:docs-->
+Framework-agnostic utilities for breaking out images and figures beyond their container width.
+
+Use the `.breakout` class to allow elements to extend beyond their parent container:
+
+```html
+<div class="breakout">
+  <img src="image.jpg" alt="Description" />
+</div>
+```
+
+The breakout container has `10%` inline padding and a max-width of `calc(10% + 65ch + 10%)`. The breakout utilities support images, pictures, figures, canvas, audio, video, tables, pre, iframe, and other media elements. Tables inside `.breakout` are specifically enhanced for horizontal scrolling and full-bleed mobile display. This is automatically included when you import the stylesheet.
+<!--section--> */

@@ -11,6 +11,7 @@ pre {
 }
 
 code {
+  /* Code block caption via data-attr (to display filename, etc.) */
   &[data-caption] {
     &::before {
       content: attr(data-caption);
