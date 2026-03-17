@@ -22,20 +22,20 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <big>
 
-- [Layout <small>blades</small>](https://blades.ninja/css/layout/)
-- [Breakout <small>blades</small>](https://blades.ninja/css/breakout/)
-- [Typography <small>blades</small>](https://blades.ninja/css/typography/)
-  - Header anchors
-  - Link [fav]icons
-- [Table <small>blades</small>](https://blades.ninja/css/table/)
-  - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper)
-- [Code <small>blades</small>](https://blades.ninja/css/code/)
-  - Prism.js treeview comments
-- [Utility <small>blades</small>](https://blades.ninja/css/utilities/)
+- [Layout](https://blades.ninja/css/layout/)
+  - [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
+- [Utilities](https://blades.ninja/css/utilities/)
   - Jump-to-top
   - Table-of-contents
   - Auto-columns
   - Auto-dark
+- [Typography](https://blades.ninja/css/typography/)
+  - [Table](https://blades.ninja/css/table/)
+  - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
+  - Header anchors
+  - Link [fav]icons
+  - List markers {data-marker=🥷}
+  - [Code](https://blades.ninja/css/code/)
 
 {.columns}
 
@@ -78,9 +78,9 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 <big>
 
-- [Base HTML <small>blade</small>](https://blades.ninja/html/)
-- [Links <small>blade</small>](https://blades.ninja/html/links/)
-- [Google Tag Manager <small>blade</small>](https://blades.ninja/html/gtm/)
+- [Base HTML](https://blades.ninja/html/) {data-marker=🥷}
+- [Links](https://blades.ninja/html/links/)
+- [Google Tag Manager](https://blades.ninja/html/gtm/)
 
 {.columns}
 
