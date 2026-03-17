@@ -1,7 +1,0 @@
-/*** Extends https://github.com/picocss/pico/blob/main/scss/components/_accordion.scss ***/
-
-details {
-  &:where(article > *):last-child {
-    margin-bottom: 0;
-  }
-}
