@@ -1,0 +1,26 @@
+/* <!--section:docs-->
+Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
+```css */
+a {
+  /* Helper to handle icons in links */
+  > i {
+    display: inline-block;
+    font-style: normal;
+  }
+
+  /* Helper for favicons in links */
+  &[data-has-favicon] {
+    display: inline-block;
+
+    > img {
+      max-height: 1.25em;
+      margin-top: calc(-0.25em / 2);
+      margin-inline-end: 0.375ch; /* =3/8 */
+
+      /* for tw-typography (.prose) */
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+}
+/*``` <!--section--> */

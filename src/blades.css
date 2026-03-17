@@ -6,11 +6,10 @@
 
 /* Content */
 @import "./_typography";
+@import "./_link";
 @import "./_table";
 @import "./responsive-table";
+@import "./_code";
 
 /* Utilities */
-@import "./_tricks";
-
-/* 3rd-party */
-@import "./_prism";
+@import "./_utilities";

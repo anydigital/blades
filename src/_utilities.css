@@ -1,0 +1,60 @@
+/* <!--section:docs-->
+```css */
+
+/* Extends Tailwind */
+.invert {
+  /* Fix the scrollbar color when inverted */
+  ::-webkit-scrollbar {
+    filter: invert(1) !important;
+  }
+}
+
+/* Jump to top trick */
+[data-jump-to="top"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-top: 50vh;
+  opacity: 25%;
+
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+/* Table of contents */
+[data-is-toc] {
+  font-size: 87.5%;
+
+  a {
+    text-decoration: none;
+  }
+  > ul {
+    columns: 30ch auto; /* 2 cols max for 65ch container */
+  }
+}
+
+.columns {
+  columns: 20ch auto; /* 3 cols max for 65ch container */
+
+  /* Avoid breaking inside elements, such as nested lists */
+  > * {
+    break-inside: avoid;
+  }
+}
+
+.faded {
+  opacity: 50%;
+  &:hover {
+    opacity: 87.5%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .dark-auto {
+      filter: invert(100%) hue-rotate(180deg);
+    }
+  }
+}
+/*``` <!--section--> */

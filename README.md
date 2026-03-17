@@ -43,8 +43,19 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <big>
 
 - [Layout <small>blades</small>](https://blades.ninja/layout/)
+  - Breakout elements
+- [Typography <small>blades</small>](https://blades.ninja/typography/)
+  - Header anchors
+  - Link [fav]icons
 - [Table <small>blades</small>](https://blades.ninja/table/)
-  - including [Responsive table without wrapper](https://blades.ninja/table/#responsive-table-without-wrapper)
+  - [Responsive table without wrapper](https://blades.ninja/table/#responsive-table-without-wrapper)
+- [Code <small>blades</small>](https://blades.ninja/code/)
+  - Prism.js treeview comments
+- [Utility <small>blades</small>](https://blades.ninja/utilities/)
+  - Jump-to-top
+  - Table-of-contents
+  - Auto-columns
+  - Auto-dark
 
 {.columns}
 

@@ -1,0 +1,43 @@
+/* <!--section:docs-->
+Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
+```css */
+pre {
+  padding: 1rem 1.5rem;
+  padding-inline-end: 2rem;
+
+  @media screen and (max-width: 767px) {
+    border-radius: 0;
+  }
+}
+
+code {
+  &[data-caption] {
+    &::before {
+      content: attr(data-caption);
+      display: block;
+      margin-bottom: 1rem;
+      opacity: 50%;
+      font-style: italic;
+    }
+  }
+
+  &:where(pre > *) {
+    padding: 0;
+  }
+}
+
+/*** Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css ***/
+.token.treeview-part {
+  .entry-line {
+    width: 2.5em !important;
+    opacity: 25%;
+  }
+  .entry-name:last-child {
+    opacity: 50%;
+
+    &::before {
+      display: none !important;
+    }
+  }
+}
+/*``` <!--section--> */
