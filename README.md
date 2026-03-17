@@ -2,7 +2,7 @@
 
 <!--section:hero-->
 
-<hgroup>Framework-agnostic,<wbr> class-light CSS<sup>+</sup> blade kit.</hgroup>
+<hgroup>Framework-agnostic,<wbr> class-light CSS⁺ blade kit.</hgroup>
 
 <big>Use with Pico, Tailwind, or any other CSS reset/framework.</big>
 
