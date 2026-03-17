@@ -40,13 +40,15 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
   <p>inspired by Pico.css</p>
 </hgroup>
 
-<p><big class="columns">
+<big>
 
 - [Layout <small>blades</small>](https://blades.ninja/layout/)
 - [Table <small>blades</small>](https://blades.ninja/table/)
   - including [Responsive table without wrapper](https://blades.ninja/table/#responsive-table-without-wrapper)
 
-</big></p>
+{.columns}
+
+</big>
 
 <details><summary role="button" class="outline">Install CSS blades</summary>
 

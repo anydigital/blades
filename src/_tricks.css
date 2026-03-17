@@ -91,6 +91,11 @@ code[data-caption] {
 /* @TODO: to TRICKS */
 .columns {
   columns: 20ch auto; /* 3 cols max for 65ch container */
+
+  /* Avoid breaking inside elements, such as nested lists */
+  > * {
+    break-inside: avoid;
+  }
 }
 
 /* @TODO: to TRICKS */
