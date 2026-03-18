@@ -145,6 +145,6 @@ Featured by:
 Credits:
 
 - https://picocss.com/ for inspiration
-- https://www.11ty.dev/ for build power
+- https://11ty.dev/ for build power
 
 </div>
