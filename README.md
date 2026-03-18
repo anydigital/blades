@@ -43,7 +43,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <details><summary role="button" class="outline">Install CSS blades</summary>
 
-<mark>Option 1.</mark> From CDN:
+<mark>Option A.</mark> From CDN:
 
 <!--prettier-ignore-->
 ```html
@@ -51,7 +51,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.theme.min.css" rel="stylesheet" /><!-- optional -->
 ```
 
-<mark>Option 2.</mark> Via npm:
+<mark>Option B.</mark> Via npm:
 
 ```sh
 npm install @anydigital/blades
@@ -127,24 +127,15 @@ Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
 
 </details>
 
-Or use a fully preconfigured starter:
+Or use a fully preconfigured:
 
-[Use Bladeswitch ↗ &nbsp;<small>Jekyll + Pico + Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
+[🥷 Bladeswitch Starter ↗ &nbsp;<small>Jekyll + Pico + Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
 
----
-
-<hgroup><small>Build Awesome plugin</small><h2>Eleventy blades</h2><p></p></hgroup>
-
-<nav class="grid">
-  <a href="https://github.com/anydigital/eleventy-blades" role="button" class="outline">
-    Install Eleventy blades ↗ <br><small>plugin</small>
-  </a>
-  <a href="https://github.com/anydigital/build-awesome-starter" role="button" class="outline">
-    Use Build Awesome Starter ↗ <br><small>11ty + Tailwind + Typography + Blades</small>
-  </a>
-</nav>
+<!--section:gh-only-->
 
 ---
+
+<!--section:appendix-->
 
 <div class="grid"><div>
 
