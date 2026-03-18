@@ -18,9 +18,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--section:index-->
 
-<hgroup id="css"><small>Class-light</small>
-  <h2>CSS blades</h2><p>inspired by Pico.css</p>
-</hgroup>
+<hgroup id="css"><small>Class-light</small><h2>CSS blades</h2><p>inspired by Pico.css</p></hgroup>
 
 <big>
 
@@ -72,9 +70,7 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 ---
 
-<hgroup><small>Nunjucks / Liquid</small>
-  <h2>HTML blades</h2><p>for 11ty/Build Awesome, Jekyll, etc.</p>
-</hgroup>
+<hgroup><small>Nunjucks / Liquid</small><h2>HTML blades</h2><p>for 11ty/Build Awesome, Jekyll, etc.</p></hgroup>
 
 <big>
 
@@ -113,9 +109,7 @@ or:
 
 ---
 
-<hgroup><small>Old-school</small>
-  <h2>Jekyll blades</h2><p></p>
-</hgroup>
+<hgroup><small>Old-school</small><h2>Jekyll blades</h2><p></p></hgroup>
 
 Everything above (CSS+HTML blades) is available as Jekyll theme:
 
@@ -139,15 +133,11 @@ Or fully preconfigured:
 
 ---
 
-<hgroup><small>Open-source</small>
-  <h2>Starter blades</h2><p></p>
-</hgroup>
+<hgroup><small>Eleventy plugin</small><h2>Build Awesome blades</h2><p></p></hgroup>
 
-  <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
-    <big>Blades with Tailwind</big><br>
-    using Eleventy and Nunjucks <br>
-    <small>(Build Awesome Starter)</small>
-  </a>
+Fully preconfigured:
+
+[Use Blades with Eleventy and Tailwind <small>&nbsp;(Build Awesome Starter)</small>](https://github.com/anydigital/build-awesome-starter){role=button .outline}
 
 ---
 
