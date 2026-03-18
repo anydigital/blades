@@ -151,7 +151,7 @@ Or use a fully preconfigured starter:
 Featured by:
 
 - https://github.com/uhub/awesome-css
-- [awesome-11ty-build-awesome](https://github.com/anydigital/awesome-11ty-build-awesome)
+- [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome) list
 
 </div><div>
 
