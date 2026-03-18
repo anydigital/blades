@@ -25,17 +25,17 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 - [Typography](https://blades.ninja/css/typography/)
   - [Table](https://blades.ninja/css/table/)
   - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
-  - Heading anchors
-  - Link [fav]icons
-  - List markers {data-marker=🥷}
+  - [Heading anchors](https://blades.ninja/css/typography/#heading-anchors)
+  - [List markers](https://blades.ninja/css/typography/#list-markers) {data-marker=🥷}
+  - [Link [fav]icons](https://blades.ninja/css/typography/#link-fav-icons)
   - [Code](https://blades.ninja/css/code/)
 - [Layout](https://blades.ninja/css/layout/)
   - [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
 - [Utilities](https://blades.ninja/css/utilities/)
-  - Jump-to-top
-  - Table-of-contents
-  - Auto-columns
-  - Auto-dark
+  - [Jump to top](https://blades.ninja/css/utilities/#jump-to-top)
+  - [Table of contents](https://blades.ninja/css/utilities/#table-of-contents)
+  - [Auto-columns](https://blades.ninja/css/utilities/#auto-columns)
+  - [Auto-dark](https://blades.ninja/css/utilities/#auto-dark)
 
 {.columns}
 

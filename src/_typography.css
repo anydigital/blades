@@ -1,6 +1,4 @@
-/* <!--section:docs-->
-Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-```css */
+/*** Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss ***/
 html {
   /* Enable font smoothing */
   -webkit-font-smoothing: antialiased;
@@ -16,7 +14,10 @@ body {
     hyphens: none;
   }
 }
-
+/*
+<!--section:docs-->
+## Heading anchors
+```css */
 h1,
 h2,
 h3,
@@ -25,7 +26,6 @@ h5,
 h6 {
   position: relative;
 
-  /* Heading anchors */
   [data-is-anchor] {
     visibility: hidden;
     position: absolute;
@@ -41,7 +41,10 @@ h6 {
     }
   }
 }
+/*```
 
+## List markers
+```css */
 ul,
 ol {
   li[data-marker]::marker {

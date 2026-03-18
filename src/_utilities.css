@@ -1,15 +1,7 @@
 /* <!--section:docs-->
+
+## Jump to top
 ```css */
-
-/* Extends Tailwind */
-.invert {
-  /* Fix the scrollbar color when inverted */
-  ::-webkit-scrollbar {
-    filter: invert(1) !important;
-  }
-}
-
-/* Jump to top trick */
 [data-jump-to="top"] {
   position: fixed;
   bottom: 0;
@@ -21,8 +13,10 @@
     opacity: 75%;
   }
 }
+/*```
 
-/* Table of contents */
+## Table of contents
+```css */
 [data-is-toc] {
   font-size: 87.5%;
 
@@ -34,6 +28,10 @@
   }
 }
 
+/*```
+
+## Auto-columns
+```css */
 .columns {
   columns: 20ch auto; /* 3 cols max for 65ch container */
 
@@ -42,7 +40,21 @@
     break-inside: avoid;
   }
 }
+/*```
 
+## Auto-dark
+```css */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .dark-auto {
+      filter: invert(100%) hue-rotate(180deg);
+    }
+  }
+}
+/*```
+
+## Other
+```css */
 .faded {
   opacity: 50%;
   &:hover {
@@ -50,11 +62,11 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    .dark-auto {
-      filter: invert(100%) hue-rotate(180deg);
-    }
+/* Extends https://tailwindcss.com/docs/filter-invert */
+.invert {
+  /* Fix the scrollbar color when inverted */
+  ::-webkit-scrollbar {
+    filter: invert(1) !important;
   }
 }
 /*``` <!--section--> */
