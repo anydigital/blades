@@ -133,7 +133,7 @@ Or use a fully preconfigured starter:
 
 ---
 
-<hgroup><small>Eleventy plugin</small><h2>Build Awesome blades</h2><p></p></hgroup>
+<hgroup><small>Build Awesome plugin</small><h2>Eleventy blades</h2><p></p></hgroup>
 
 <nav class="grid">
   <a href="https://github.com/anydigital/eleventy-blades" role="button" class="outline">
