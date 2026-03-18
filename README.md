@@ -127,17 +127,22 @@ Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
 
 </details>
 
-Or fully preconfigured:
+Or fully preconfigured starter:
 
-[Use Blades with Jekyll and Pico <small>&nbsp;(Bladeswitch Starter)</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
+[Use Bladeswitch ↗ &nbsp;<small>Jekyll + Pico + Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
 
 ---
 
 <hgroup><small>Eleventy plugin</small><h2>Build Awesome blades</h2><p></p></hgroup>
 
-Fully preconfigured:
-
-[Use Blades with Eleventy and Tailwind <small>&nbsp;(Build Awesome Starter)</small>](https://github.com/anydigital/build-awesome-starter){role=button .outline}
+<nav class="grid">
+  <a href="https://github.com/anydigital/eleventy-blades" role="button" class="outline">
+    Install Eleventy blades ↗ <br><small>plugin</small>
+  </a>
+  <a href="https://github.com/anydigital/build-awesome-starter" role="button" class="outline">
+    Use Build Awesome Starter ↗ <br><small>11ty + Tailwind + Typography + Blades</small>
+  </a>
+</nav>
 
 ---
 
