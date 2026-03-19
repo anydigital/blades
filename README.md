@@ -20,28 +20,33 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <hgroup id="css"><small>Class-light</small><h2>CSS blades</h2><p>inspired by Pico.css</p></hgroup>
 
-<big>
+<div class="grid"><div>
 
-- [Typography](https://blades.ninja/css/typography/)
-  - [Table](https://blades.ninja/css/table/)
-  - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
-  - [Heading anchors](https://blades.ninja/css/typography/#heading-anchors)
-  - [List markers](https://blades.ninja/css/typography/#list-markers) {data-marker=🥷}
-  - [Link [fav]icons](https://blades.ninja/css/typography/#link-fav-icons)
-  - [Code](https://blades.ninja/css/code/)
-- [Layout](https://blades.ninja/css/layout/)
-  - [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
-- [Utilities](https://blades.ninja/css/utilities/)
-  - [Jump to top](https://blades.ninja/css/utilities/#jump-to-top)
-  - [Table of contents](https://blades.ninja/css/utilities/#table-of-contents)
-  - [Auto-columns](https://blades.ninja/css/utilities/#auto-columns)
-  - [Auto-dark](https://blades.ninja/css/utilities/#auto-dark)
+[**Typography**](https://blades.ninja/css/typography/):
 
-{.columns}
+- [Table](https://blades.ninja/css/table/)
+- [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
+- [Heading anchors](https://blades.ninja/css/typography/#heading-anchors)
+- [List markers](https://blades.ninja/css/typography/#list-markers) {data-marker=🥷}
+- [Link [fav]icons](https://blades.ninja/css/typography/#link-fav-icons)
+- [Code](https://blades.ninja/css/code/)
 
-</big>
+</div><div>
 
-<details><summary role="button" class="outline">Install CSS blades</summary>
+[**Layout**](https://blades.ninja/css/layout/):
+
+- [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
+
+[**Utilities**](https://blades.ninja/css/utilities/):
+
+- [Jump to top](https://blades.ninja/css/utilities/#jump-to-top)
+- [Table of contents](https://blades.ninja/css/utilities/#table-of-contents)
+- [Auto-columns](https://blades.ninja/css/utilities/#auto-columns)
+- [Auto-dark](https://blades.ninja/css/utilities/#auto-dark)
+
+</div></div><br>
+
+<details><summary role="button" class="outline"><b>Install CSS blades</b></summary>
 
 <mark>Option A.</mark> From CDN:
 
@@ -72,17 +77,14 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 <hgroup><small>Nunjucks / Liquid</small><h2>HTML blades</h2><p>for 11ty/Build Awesome, Jekyll, etc.</p></hgroup>
 
-<big>
-
 - [Base HTML](https://blades.ninja/html/) {data-marker=🥷}
 - [Links](https://blades.ninja/html/links/)
 - [Google Tag Manager](https://blades.ninja/html/gtm/)
 
 {.columns}
 
-</big>
-
-<details><summary role="button" class="outline">Install HTML blades</summary>
+<br>
+<details><summary role="button" class="outline"><b>Install HTML blades</b></summary>
 
 ```sh
 npm install @anydigital/blades
@@ -113,7 +115,7 @@ or:
 
 Everything above (CSS+HTML blades) is available as Jekyll theme:
 
-<details><summary role="button" class="outline">Install as Jekyll theme</summary>
+<details><summary role="button" class="outline"><b>Install as Jekyll theme</b></summary>
 
 In you `_config.yml`:
 
