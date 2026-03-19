@@ -134,7 +134,7 @@ Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
 
 </details>
 
-Or use a fully preconfigured:
+Or use a preconfigured template:
 
 [🥷 Bladeswitch Starter ↗ &nbsp;<small>Jekyll + Pico + Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
 
