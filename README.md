@@ -139,7 +139,7 @@ Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
 
 Or use a preconfigured template:
 
-[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll﹢Pico﹢Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
+[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
 
 ---
 
