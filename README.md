@@ -45,6 +45,7 @@ inspired by Pico.css
 <li><a href="https://blades.ninja/css/#auto-dark">Auto-dark</a></li>
 <li><a href="https://blades.ninja/css/#misc">Misc</a></li></ul></li></ul>
 
+<!--section:index,install-->
 <details><summary role="button" class="outline"><b>Install CSS blades</b></summary>
 
 <mark>Option A.</mark> From CDN:
