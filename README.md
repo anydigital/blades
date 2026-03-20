@@ -72,6 +72,7 @@ Then import in your .css:
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
 
 </details>
+<!--section:index-->
 
 ---
 
