@@ -1,4 +1,5 @@
 /* <!--section:docs-->
+### Document
 Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss
 
 Prevent horizontal overflow and scrolling, modern way:
@@ -8,7 +9,7 @@ html {
 }
 /*```
 
-## Landmarks
+### Landmarks
 Extends https://github.com/picocss/pico/blob/main/scss/layout/_landmarks.scss
 
 1. Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support).

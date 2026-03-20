@@ -16,7 +16,7 @@ body {
 }
 /*
 <!--section:docs-->
-## Heading anchors
+### Heading anchors
 ```css */
 h1,
 h2,
@@ -43,7 +43,7 @@ h6 {
 }
 /*```
 
-## List markers
+### List markers
 ```css */
 ul,
 ol {

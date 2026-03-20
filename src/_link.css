@@ -1,4 +1,5 @@
-/* <!--section:code-->```css */
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
+<!--section:code-->```css */
 a {
   /* Helper to handle icons in links */
   > i {
@@ -23,7 +24,5 @@ a {
 }
 /*```
 <!--section:docs-->
-Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-
-## Link [fav]icons
+### Link [fav]icons
 <!--section--> */
