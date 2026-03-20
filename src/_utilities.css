@@ -4,7 +4,7 @@
 ### Auto-columns
 ```css */
 .columns {
-  columns: 20ch auto; /* 3 cols max for 65ch container */
+  columns: 30ch auto; /* 2 cols max for 65ch container */
 
   /* Avoid breaking inside elements, such as nested lists */
   > * {

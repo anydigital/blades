@@ -50,5 +50,13 @@ ol {
   li[data-marker]::marker {
     content: attr(data-marker) " ";
   }
+
+  &.unlist {
+    padding-inline-start: 0;
+
+    > li {
+      list-style: none;
+    }
+  }
 }
 /*``` <!--section--> */
