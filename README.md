@@ -4,7 +4,7 @@
 
 <hgroup>Framework-agnostic,<wbr> class-light CSS⁺ blade kit.</hgroup>
 
-<big>Use with Pico, Tailwind, or any other CSS reset/framework.</big>
+<big>Use with Pico, Simple, Tailwind, or any other CSS reset/framework.</big>
 
 ![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=white&include_prereleases)
 [![](https://img.shields.io/github/stars/anydigital/blades?label=)](https://github.com/anydigital/blades)
