@@ -149,6 +149,7 @@ Or use a preconfigured template:
 - Featured by:
   - https://github.com/uhub/awesome-css
   - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
+  - https://jekyll-themes.com/anydigital/blades
 - Credits:
   - https://picocss.com/ for inspiration
   - https://11ty.dev/ for build power
