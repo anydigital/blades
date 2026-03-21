@@ -2,7 +2,10 @@
 
 /* Layout */
 
-/* <!--section:docs-->
+/*
+<!--section:docs-->
+
+### Document
 Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss
 
 Prevent horizontal overflow and scrolling, modern way:
@@ -14,7 +17,7 @@ html {
 
 /*```
 
-## Landmarks
+### Landmarks
 Extends https://github.com/picocss/pico/blob/main/scss/layout/_landmarks.scss
 
 1. Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support).
@@ -31,7 +34,41 @@ body {
   }
 }
 
-/*``` <!--section--> */
+/*```
+
+### Table of contents
+```css */
+
+[data-is-toc] {
+  font-size: 87.5%;
+
+  a {
+    text-decoration: none;
+  }
+  > ul {
+    columns: 30ch auto; /* 2 cols max for 65ch container */
+  }
+}
+
+/*```
+
+### Jump to top
+```css */
+
+[data-jump-to="top"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-top: 50vh;
+  opacity: 25%;
+
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+/*```
+<!--section--> */
 
 /* <!--section:code-->```css */
 
@@ -152,7 +189,7 @@ body {
 
 /*
 <!--section:docs-->
-## Heading anchors
+### Heading anchors
 ```css */
 
 h1,
@@ -181,7 +218,7 @@ h6 {
 
 /*```
 
-## List markers
+### List markers
 ```css */
 
 ul,
@@ -189,11 +226,20 @@ ol {
   li[data-marker]::marker {
     content: attr(data-marker) " ";
   }
+
+  &.unlist {
+    padding-inline-start: 0;
+
+    > li {
+      list-style: none;
+    }
+  }
 }
 
 /*``` <!--section--> */
 
-/* <!--section:code-->```css */
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
+<!--section:code-->```css */
 
 a {
   /* Helper to handle icons in links */
@@ -220,13 +266,11 @@ a {
 
 /*```
 <!--section:docs-->
-Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-
-## Link [fav]icons
+### Link [fav]icons
 <!--section--> */
 
-/* <!--section:docs-->
-Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
+<!--section:docs-->
 
 ### Horizontal expanders
 
@@ -316,7 +360,6 @@ Soft-increase selector specificity trick:
 
 `table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 <!--section:docs-->
-### Responsive table without wrapper
 `<table class="responsive">` allows a table to full-bleed and scroll on mobile:
 <div>
 
@@ -331,6 +374,7 @@ Tables inside `.breakout[-all]` are responsive by default.
 <!--section--> */
 
 /* <!--section:docs-->
+### Code
 Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
 ```css */
 
@@ -380,46 +424,14 @@ code {
 
 /* Utilities */
 
-/* <!--section:docs-->
+/*
+<!--section:docs-->
 
-## Jump to top
-```css */
-
-[data-jump-to="top"] {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding-top: 50vh;
-  opacity: 25%;
-
-  &:hover {
-    opacity: 75%;
-  }
-}
-
-/*```
-
-## Table of contents
-```css */
-
-[data-is-toc] {
-  font-size: 87.5%;
-
-  a {
-    text-decoration: none;
-  }
-  > ul {
-    columns: 30ch auto; /* 2 cols max for 65ch container */
-  }
-}
-
-/*```
-
-## Auto-columns
+### Auto-columns
 ```css */
 
 .columns {
-  columns: 20ch auto; /* 3 cols max for 65ch container */
+  columns: 30ch auto; /* 2 cols max for 65ch container */
 
   /* Avoid breaking inside elements, such as nested lists */
   > * {
@@ -429,7 +441,7 @@ code {
 
 /*```
 
-## Auto-dark
+### Auto-dark
 ```css */
 
 @media (prefers-color-scheme: dark) {
@@ -442,7 +454,7 @@ code {
 
 /*```
 
-## Other
+### Misc
 ```css */
 
 .faded {

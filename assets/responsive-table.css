@@ -29,7 +29,6 @@ Soft-increase selector specificity trick:
 
 `table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 <!--section:docs-->
-### Responsive table without wrapper
 `<table class="responsive">` allows a table to full-bleed and scroll on mobile:
 <div>
 
