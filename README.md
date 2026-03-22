@@ -101,12 +101,12 @@ ln -s ../node_modules/@anydigital/blades/_includes/blades
 
 That's it! Now you can use HTML blades in your templates like this:
 
-```jinja2
-# Nunjucks:
+```jinja2 {data-caption=Nunjucks}
 {% extends 'blades/html.njk' %}
 {% include 'blades/gtm.njk' %}
+```
 
-# Liquid:
+```liquid {data-caption=Liquid}
 {% include blades/html.liquid %}
 {% include blades/gtm.liquid for_body=true %}
 {% render blades/links, links: site.links, current_url: page.url %}
