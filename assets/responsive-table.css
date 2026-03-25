@@ -28,16 +28,25 @@ table.responsive,
 Soft-increase selector specificity trick:
 
 `table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
+
 <!--section:docs-->
+
 `<table class="responsive">` allows a table to full-bleed and scroll on mobile:
-<div>
+<hr><div>
 
 | Term | Description <hr class="x2"> | Link |
 | --- | --- | --- |
 | Responsive design | Approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. | https://en.wikipedia.org/wiki/Responsive_web_design |
 
 {.responsive}
-</div>
+</div><hr>
 
-Tables inside `.breakout[-all]` are responsive by default.
+Tables inside https://blades.ninja/css/breakout/ are responsive by default.
+
+Living examples:
+- https://any.digital/insights/ai-ide/
+- https://any.digital/insights/css-frameworks/
+- https://any.digital/insights/ssg/
+- https://blades.ninja/build-awesome-11ty/#min-starters
+
 <!--section--> */

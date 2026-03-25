@@ -153,7 +153,11 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 /* Content */
 
-/*** Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss ***/
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
+<!--section:docs-->
+
+Global styles:
+```css */
 
 html {
   /* Enable font smoothing */
@@ -171,9 +175,15 @@ body {
   }
 }
 
-/*
-<!--section:docs-->
+/*```
+
 ### Heading anchors
+
+Set `data-is-anchor` attribute on anchors inside headings to position them absolutely, and show only on hover (when supported):
+
+<article><h2>Heading with anchor <a href="#hwa" data-is-anchor>#</a></h2></article>
+
+How it works:
 ```css */
 
 h1,
@@ -193,7 +203,7 @@ h6 {
     color: silver;
     text-decoration: none;
   }
-  /* If hover is supported, show anchor on hover */
+  /* Avoid double-tap on touch devices */
   @media (hover: hover) {
     &:hover {
       [data-is-anchor] {
@@ -201,18 +211,25 @@ h6 {
       }
     }
   }
-  /* Otherwise always show anchors, but subtle */
-  @media (hover: none) {
-    [data-is-anchor] {
-      visibility: visible;
-      opacity: 37.5%;
-    }
-  }
 }
 
 /*```
+> **PRO-TIP** for 11ty + markdown-it-anchor: https://github.com/anydigital/eleventy-blades/blob/main/src/eleventy.config.js
 
 ### List markers
+
+Use `data-marker="🥷"` helper attribute to customize list markers:
+<article>
+
+- You can make
+- really {data-marker=❄️}
+- cool {data-marker=🥶}
+- markers {data-marker=🧊}
+- with Blades CSS {data-marker=🥷}
+- using `data-marker` helper attribute.
+</article>
+
+How it works:
 ```css */
 
 ul,
@@ -230,10 +247,12 @@ ol {
   }
 }
 
-/*``` <!--section--> */
+/*```
+<!--section--> */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:code-->```css */
+<!--section:code-->
+```css */
 
 a {
   /* Helper to handle icons in links */
@@ -259,8 +278,26 @@ a {
 }
 
 /*```
+> **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+
 <!--section:docs-->
+
 ### Link [fav]icons
+
+Wrap icons inside links using `<i>...&nbsp;</i>` helper to avoid underline. Compare:
+
+<big class="grid">
+  <article><a href="https://github.com/anydigital/blades">   🥷          Blades</a></article>
+  <article><a href="https://github.com/anydigital/blades"><i>🥷&nbsp;</i>Blades</a></article>
+</big>
+
+Use `data-has-favicon` helper attribute on plain-text links containing `<img>`-favicon for better alignment. Compare:
+
+<big class="grid">
+  <article><a href="https://github.com/anydigital/blades"                 ><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">/anydigital/blades</a></article>
+  <article><a href="https://github.com/anydigital/blades" data-has-favicon><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">/anydigital/blades</a></article>
+</big>
+
 <!--section--> */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
@@ -272,17 +309,23 @@ Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especia
 ```html
 <th>Col <hr></th>
 ```
-Example table:
-| SSG <hr> | Description |
-| --- | --- |
-| Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
+Example table before:
+<article class="overflow-auto"><table>
+  <tr><th>Wide tables</th><th>with many</th><th>columns might</th><th>get collapsed</th><th>and be really</th><th>hard to read!</th></tr>
+</table></article>
 
-Same table without `<hr>`-expander would render as:
-| SSG | Description |
-| --- | --- |
-| Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
+Same table after adding `<hr>`-expanders:
+<article class="overflow-auto"><table>
+  <tr><th>Wide tables <hr></th><th>with many <hr></th><th>columns might <hr></th><th>get collapsed <hr></th><th>and be really <hr></th><th>hard to read! <hr></th></tr>
+</table></article>
 
-###### How it works
+Living examples of big tables with `<hr>`-expanders:
+- https://any.digital/insights/ai-ide/
+- https://any.digital/insights/css-frameworks/
+- https://any.digital/insights/ssg/
+- https://blades.ninja/build-awesome-11ty/#min-starters
+
+How it works:
 ```css */
 
 table {
@@ -302,16 +345,22 @@ table {
 
 /*```
 ---
+
 ### Borderless table
 
 `<table class="borderless">` removes all default borders:
-| Less |     | Borders |
-| ---- | --- | ------- |
-| More |     | Fun     |
+
+<article>
+
+| Less | borders |
+| ---- | ------- |
+| more | fun     |
 
 {.borderless}
+</article>
 
 Living example: https://bladeswitch.com/#minimal-dependencies table
+
 <!--section--> */
 
 table.borderless {
@@ -353,18 +402,27 @@ table.responsive,
 Soft-increase selector specificity trick:
 
 `table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
+
 <!--section:docs-->
+
 `<table class="responsive">` allows a table to full-bleed and scroll on mobile:
-<div>
+<hr><div>
 
 | Term | Description <hr class="x2"> | Link |
 | --- | --- | --- |
 | Responsive design | Approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. | https://en.wikipedia.org/wiki/Responsive_web_design |
 
 {.responsive}
-</div>
+</div><hr>
 
-Tables inside `.breakout[-all]` are responsive by default.
+Tables inside https://blades.ninja/css/breakout/ are responsive by default.
+
+Living examples:
+- https://any.digital/insights/ai-ide/
+- https://any.digital/insights/css-frameworks/
+- https://any.digital/insights/ssg/
+- https://blades.ninja/build-awesome-11ty/#min-starters
+
 <!--section--> */
 
 /* <!--section:docs-->
