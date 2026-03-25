@@ -1,25 +1,5 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:docs-->
-
-### Link [fav]icons
-
-Wrap icons inside links using `<i>...&nbsp;</i>` helper to avoid underline:
-
-<div class="grid">
-  <article>Before:<br> <big><a href="https://github.com/anydigital/blades">🥷 Blades</a></big></article>
-  <article>After:<br>  <big><a href="https://github.com/anydigital/blades"><i>🥷&nbsp;</i>Blades</a></big></article>
-</div>
-
-Use `data-has-favicon` helper attribute on plain-text links containing `<img>`-favicons for better alignment:
-
-<article>
-
-  <big>https://github.com/anydigital/blades</big>
-</article>
-
-> **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
-
-How it works:
+<!--section:code-->
 ```css */
 a {
   /* Helper to handle icons in links */
@@ -44,4 +24,24 @@ a {
   }
 }
 /*```
+<!--section:docs-->
+
+### Link [fav]icons
+
+Wrap icons inside links using `<i>...&nbsp;</i>` helper to avoid underline. Compare:
+
+<big class="grid">
+  <article><a href="https://github.com/anydigital/blades">   🥷          Blades</a></article>
+  <article><a href="https://github.com/anydigital/blades"><i>🥷&nbsp;</i>Blades</a></article>
+</big>
+
+Use `data-has-favicon` helper attribute on plain-text links containing `<img>`-favicon for better alignment. Compare:
+
+<big class="grid">
+  <article><a href="https://github.com/anydigital/blades"                 ><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">/anydigital/blades</a></article>
+  <article><a href="https://github.com/anydigital/blades" data-has-favicon><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">/anydigital/blades</a></article>
+</big>
+
+> **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+
 <!--section--> */
