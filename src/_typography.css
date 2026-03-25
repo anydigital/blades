@@ -59,15 +59,17 @@ h6 {
 
 ### List markers
 
-Use `data-marker="🥷"` helper attribute to customize list markers:
+Use `<li data-marker="🥷">` attribute to customize list markers:
 <article>
 
-- You can make
+- You
+- can
+- make
 - really {data-marker=❄️}
 - cool {data-marker=🥶}
 - markers {data-marker=🧊}
 - with Blades CSS {data-marker=🥷}
-- using `data-marker` helper attribute.
+- using `data-marker` attribute.
 </article>
 
 How it works:
@@ -87,4 +89,5 @@ ol {
   }
 }
 /*```
+> PRO TIP for Markdown: use https://github.com/arve0/markdown-it-attrs to enable power syntax like `- ... {data-marker=🥷}`
 <!--section--> */
