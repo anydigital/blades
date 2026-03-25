@@ -7,15 +7,15 @@ Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especia
 ```html
 <th>Col <hr></th>
 ```
-Example table:
-| SSG <hr> | Description |
-| --- | --- |
-| Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
+Example table before:
+<article class="overflow-auto"><table>
+  <tr><th>Wide tables</th><th>with many</th><th>columns might</th><th>get collapsed</th><th>and be really</th><th>hard to read!</th></tr>
+</table></article>
 
-Same table without `<hr>`-expander would render as:
-| SSG | Description |
-| --- | --- |
-| Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
+Same table after adding `<hr>`-expanders:
+<article class="overflow-auto"><table>
+  <tr><th>Wide tables <hr></th><th>with many <hr></th><th>columns might <hr></th><th>get collapsed <hr></th><th>and be really <hr></th><th>hard to read! <hr></th></tr>
+</table></article>
 
 ###### How it works
 ```css */
