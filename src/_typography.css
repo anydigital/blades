@@ -60,16 +60,14 @@ h6 {
 ### List markers
 
 Use `data-marker="🥷"` helper attribute to customize list markers:
-
 <article>
 
-- You
-- can
-- make
+- You can make
 - really {data-marker=❄️}
 - cool {data-marker=🥶}
 - markers {data-marker=🧊}
-- with Blades CSS. {data-marker=🥷}
+- with Blades CSS {data-marker=🥷}
+- using `data-marker` helper attribute.
 </article>
 
 How it works:
