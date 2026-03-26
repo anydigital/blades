@@ -2,13 +2,11 @@
 
 /* Layout */
 
-/*
+/* Extends https://github.com/picocss/pico/blob/main/scss/layout/
 <!--section:docs-->
 
-### Document
-Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss
-
-Prevent horizontal overflow and scrolling, modern way:
+Global styles:
+- Prevent horizontal overflow and scrolling, modern way.
 ```css */
 
 html {
@@ -18,10 +16,8 @@ html {
 /*```
 
 ### Landmarks
-Extends https://github.com/picocss/pico/blob/main/scss/layout/_landmarks.scss
-
-1. Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support).
-2. Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts.
+- Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support).
+- Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts.
 ```css */
 
 body {
@@ -35,6 +31,24 @@ body {
 }
 
 /*```
+
+### Auto-columns
+```css */
+
+.columns,
+[data-is-toc] > ul,
+[data-is-toc] > ol {
+  columns: 30ch auto; /* 2 cols max for 65ch container */
+
+  /* Avoid breaking inside elements, such as nested lists */
+  > * {
+    break-inside: avoid;
+  }
+}
+
+/*```
+
+Table of contents (`[data-is-toc]`) has auto-columns by default.
 
 ### Jump to top
 ```css */
@@ -268,24 +282,17 @@ ol {
 ```css */
 
 a {
-  /* Helper to handle icons in links */
+  /* Helper to handle [fav]icons in links */
   > i {
     display: inline-block;
     font-style: normal;
-  }
-
-  /* Helper for favicons in links */
-  &[data-has-favicon] {
-    display: inline-block;
 
     > img {
-      max-height: 1.25em;
-      margin-top: calc(-0.25em / 2);
-      margin-inline-end: 0.375ch; /* =3/8 */
+      height: 1.25em;
+      margin-block: calc(-0.25em / 2);
 
       /* for tw-typography (.prose) */
       display: inline-block;
-      margin-bottom: 0;
     }
   }
 }
@@ -297,18 +304,24 @@ a {
 
 ### Link [fav]icons
 
-Wrap icons inside links using `<i>...&nbsp;</i>` helper to avoid underline. Compare:
+Wrap [fav]icons inside links using `<i>...&nbsp;</i>` helper to size automatically and avoid underline. Compare:
 
 <big class="grid">
-  <article><a href="https://github.com/anydigital/blades">   🥷          Blades</a></article>
-  <article><a href="https://github.com/anydigital/blades"><i>🥷&nbsp;</i>Blades</a></article>
+  <article><a href="https://github.com/anydigital/blades">
+       🥷          Blades
+  </a></article>
+  <article><a href="https://github.com/anydigital/blades">
+    <i>🥷&nbsp;</i>Blades
+  </a></article>
 </big>
 
-Use `data-has-favicon` helper attribute on plain-text links containing `<img>`-favicon for better alignment. Compare:
-
 <big class="grid">
-  <article><a href="https://github.com/anydigital/blades"                 ><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">/anydigital/blades</a></article>
-  <article><a href="https://github.com/anydigital/blades" data-has-favicon><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">/anydigital/blades</a></article>
+  <article><a href="https://github.com/anydigital/blades">
+       <img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64"          >/anydigital/blades
+  </a></article>
+  <article><a href="https://github.com/anydigital/blades">
+    <i><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">&nbsp;</i>/anydigital/blades
+  </a></article>
 </big>
 
 <!--section--> */
@@ -492,24 +505,6 @@ code {
 /*
 <!--section:docs-->
 
-### Auto-columns
-```css */
-
-.columns,
-[data-is-toc] > ul,
-[data-is-toc] > ol {
-  columns: 30ch auto; /* 2 cols max for 65ch container */
-
-  /* Avoid breaking inside elements, such as nested lists */
-  > * {
-    break-inside: avoid;
-  }
-}
-
-/*```
-
-Table of contents (`[data-is-toc]`) has auto-columns by default.
-
 ### Auto-dark
 ```css */
 
@@ -523,7 +518,7 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
 
 /*```
 
-### Misc
+### Faded
 ```css */
 
 .faded {
@@ -532,6 +527,11 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
     opacity: 87.5%;
   }
 }
+
+/*```
+
+### Invert
+```css */
 
 /* Extends https://tailwindcss.com/docs/filter-invert */
 

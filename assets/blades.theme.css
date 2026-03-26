@@ -1,3 +1,5 @@
+/* <!--section:code-->
+```css */
 a {
   &:not([href^="#"]) {
     text-decoration-thickness: 1px;
@@ -6,29 +8,39 @@ a {
     }
   }
 }
-
 h1 {
   font-size: 2.5em; /* for pico.css & tw-typography */
   margin-bottom: 1rem; /* for tw-typography */
 }
-
+/* Fix https://github.com/picocss/pico/blob/main/css/pico.css for the very first headings
+:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  & ~ & {
+    margin-top: 2rem;
+  }
+}
 hr {
   margin-block: 2em; /* for pico.css & tw-typography */
 }
-
 ul {
   ul {
     font-size: 87.5%;
   }
 }
-
 pre {
   small {
     opacity: 75%;
     font-weight: lighter;
   }
 }
-
 table {
   th {
     vertical-align: bottom;
@@ -41,7 +53,6 @@ table {
     margin-bottom: 0.25rem;
   }
 }
-
 [data-jump-to="top"] {
   > i {
     display: inline-block;
@@ -52,7 +63,6 @@ table {
     border-color: black;
   }
 }
-
 [data-is-toc] {
   font-size: 87.5%;
 
@@ -63,7 +73,6 @@ table {
     font-weight: 500;
   }
 }
-
 .breakout,
 .breakout-all {
   > img,
@@ -71,9 +80,10 @@ table {
     margin-bottom: 1rem;
   }
 }
-
 .faded {
   a {
     text-decoration-style: dotted;
   }
 }
+/*```
+<!--section--> */
