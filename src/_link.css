@@ -36,7 +36,7 @@ Wrap [fav]icons inside links using `<i>...&nbsp;</i>` helper to size automatical
 
 <big class="grid">
   <article><a href="https://github.com/anydigital/blades">
-       <img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64"          >/anydigital/blades
+       <img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64"         > /anydigital/blades
   </a></article>
   <article><a href="https://github.com/anydigital/blades">
     <i><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=64">&nbsp;</i>/anydigital/blades
