@@ -134,10 +134,18 @@ Or use a preconfigured template:
 
 <!--section:appendix-->
 
+- Showcase:
+  - https://any.digital/ (Pico ⁺ Blades)
+  - https://build.blades.ninja/ (Tailwind ⁺ Blades)
+  - https://bladeswitch.com/ (Pico ⁺ Blades)
+  - https://minform.hostfurl.com/ (Pico ⁺ Blades)
 - Featured by:
   - https://github.com/uhub/awesome-css
-  - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
+  - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
+  - 🚀 [build-awesome-starter](https://github.com/anydigital/build-awesome-starter)
+  - 🚀 [bladeswitch starter](https://github.com/anydigital/bladeswitch)
+  - https://github.com/hostfurl/minformhf starter
 - Credits:
   - https://picocss.com/ for inspiration
   - https://11ty.dev/ for build power
