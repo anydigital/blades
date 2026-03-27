@@ -23,21 +23,24 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
-<li><a href="https://blades.ninja/css/#table">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/">Responsive table without wrapper →</a></li>
+<li><a href="https://blades.ninja/css/#install">Install</a></li>
+<li><a href="https://blades.ninja/css/#layout">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/">🥷 Breakout elements →</a></li>
+<li><a href="https://blades.ninja/css/#landmarks">Landmarks</a></li>
+<li><a href="https://blades.ninja/css/#auto-columns">Auto-columns</a></li>
+<li><a href="https://blades.ninja/css/#jump-to-top">Jump to top</a></li></ul></li>
+<li><a href="https://blades.ninja/css/#content">Content</a><ul><li><a href="https://blades.ninja/css/#heading-anchors">Heading anchors</a></li>
+<li><a href="https://blades.ninja/css/#list-markers">List markers</a></li>
+<li><a href="https://blades.ninja/css/#link-fav-icons">Link [fav]icons</a></li>
+<li><a href="https://blades.ninja/css/#code">Code</a></li></ul></li>
+<li><a href="https://blades.ninja/css/#table">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/">🥷 Responsive table without wrapper →</a></li>
 <li><a href="https://blades.ninja/css/#horizontal-expanders">Horizontal expanders</a></li>
 <li><a href="https://blades.ninja/css/#borderless-table">Borderless table</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#content">Content</a><ul><li><a href="https://blades.ninja/css/#link-fav-icons">Link [fav]icons</a></li>
-<li><a href="https://blades.ninja/css/#heading-anchors">Heading anchors</a></li>
-<li><a href="https://blades.ninja/css/#list-markers">List markers</a></li>
-<li><a href="https://blades.ninja/css/#code">Code</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#layout">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/">Breakout elements →</a></li>
-<li><a href="https://blades.ninja/css/#document">Document</a></li>
-<li><a href="https://blades.ninja/css/#landmarks">Landmarks</a></li>
-<li><a href="https://blades.ninja/css/#table-of-contents">Table of contents</a></li>
-<li><a href="https://blades.ninja/css/#jump-to-top">Jump to top</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#utilities">Utilities</a><ul><li><a href="https://blades.ninja/css/#auto-columns">Auto-columns</a></li>
-<li><a href="https://blades.ninja/css/#auto-dark">Auto-dark</a></li>
-<li><a href="https://blades.ninja/css/#misc">Misc</a></li></ul></li></ul>
+<li><a href="https://blades.ninja/css/#utilities">Utilities</a><ul><li><a href="https://blades.ninja/css/#auto-dark">Auto-dark</a></li>
+<li><a href="https://blades.ninja/css/#faded">Faded</a></li>
+<li><a href="https://blades.ninja/css/#invert">Invert</a></li>
+<li><a href="https://blades.ninja/css/#unreduce-motion">Unreduce motion</a></li></ul></li>
+<li><a href="https://blades.ninja/css/#theme-optional">Theme (optional)</a></li>
+</ul>
 
 <!--section:index,install-css-->
 <details><summary role="button" class="outline"><b>Install CSS blades</b></summary>
