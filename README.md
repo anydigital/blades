@@ -136,8 +136,9 @@ Or use a preconfigured template:
 
 - Featured by:
   - https://github.com/uhub/awesome-css
-  - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
+  - 🕶️ [Awesome-CSS-Frameworks-and-UI-Libraries](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/tree/master/Lightweight)
   - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
+  - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
   - 🚀 [build-awesome-starter](https://github.com/anydigital/build-awesome-starter)
   - 🚀 [bladeswitch starter](https://github.com/anydigital/bladeswitch)
   - https://github.com/hostfurl/minformhf starter
