@@ -1,0 +1,63 @@
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
+<!--section:code-->
+```css */
+a {
+  /* Display as inline flex, if it contains an icon */
+  &:has(> i) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375ch; /* =3/8 */
+    overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
+  }
+
+  /* Font Awesome specials */
+  &:has(> i[class^="fa-"]),
+  &:has(> i[class*=" fa-"]) {
+    gap: 0.125ch; /* =1/8 */
+  }
+
+  /* Helper to handle [fav]icons in links */
+  > i {
+    font-style: normal;
+    float: left; /*                ✅ Chrome ❌ Safari */
+    text-underline-offset: 1em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
+
+    > img {
+      height: 1.25em;
+      margin-block: calc(-0.25em / 2);
+
+      /* for tw-typography (.prose) */
+      display: inline-block;
+    }
+  }
+}
+/*```
+> **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+
+<!--section:docs-->
+
+Wrap icons, favicons, or even emojis inside links using simple `<i>`-helper to size them automatically and prevent underline. Compare:
+
+<big class="grid">
+  <article><a href="https://blades.ninja/">   🥷     Blades</a></article>
+  <article><a href="https://blades.ninja/"><i>🥷</i> Blades</a></article>
+</big>
+
+<big class="grid">
+  <article><a href="https://any.digital/">
+       <img src="https://www.google.com/s2/favicons?domain=any.digital&amp;sz=64">     any.digital
+  </a></article>
+  <article><a href="https://any.digital/">
+    <i><img src="https://www.google.com/s2/favicons?domain=any.digital&amp;sz=64"></i> any.digital
+  </a></article>
+</big>
+
+Or simply drop-in any Font Awesome icon (without wrapping it):
+
+<big><article><a href="https://github.com/anydigital/blades"><i class="fa-brands fa-github fa-lg"></i> /anydigital/blades</a></article></big>
+
+---
+
+[How we made it ↗ &nbsp;<small>(on Codepen)</small>](https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237){role=button .outline}
+
+<!--section--> */
