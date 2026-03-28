@@ -13,7 +13,7 @@ a {
   /* Helper to handle [fav]icons in links */
   > i {
     font-style: normal;
-    float: left; /*                ✅ Chrome ❌ Safari */
+    float: left; /*                 ✅ Chrome ❌ Safari */
     text-underline-offset: -2em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
 
     /* Favicons */
@@ -27,8 +27,7 @@ a {
     &[class^="fa-"],
     &[class*=" fa-"] {
       line-height: inherit;
-      margin-inline-start: -0.25ch;
-      margin-inline-end: -0.125ch; /* =1/8 */
+      --fa-width: auto;
     }
     &.fa-lg {
       line-height: normal;
@@ -40,15 +39,15 @@ a {
 
 <!--section:docs-->
 
-Wrap emojis, favicons, or simply drop Font Awesome icons inside links using the Blades' `<i>` helper. It automatically handles sizing and alignment while preventing underlines. Compare:
+Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons. Compare:
 
 ---
 
-| Without Blades <hr>                                                                                 | With Blades' `<i>` helper <hr>                                                                             | Clean HTML without `<span>`ning      |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [🥷 Link with emoji](#)                                                                             | [<i>🥷</i> Link with emoji](#)                                                                             | `<a><i>🥷</i> Text</a>`              |
-| [![](https://www.google.com/s2/favicons?domain=any.digital&sz=64) Longer link <br> with favicon](#) | [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Longer link <br> with favicon](#) | `<a><i><img src="..."></i> Text</a>` |
-| [<b class="fa-brands fa-github fa-lg"></b> Link with Font Awesome icon](#)                          | [<i class="fa-brands fa-github fa-lg"></i> Link with Font Awesome icon](#)                                 | `<a><i class="fa-..."></i> Text</a>` |
+| Without Blades <hr class="lg">                                                                          | With Blades' `<i>`-helper <hr class="lg">                                                                      | Clean HTML without `<span>ning` <hr class="x2"> |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [🥷 Link with emoji](#)                                                                                 | [<i>🥷</i> Link with emoji](#)                                                                                 | `<a><i>🥷</i> Text</a>`                         |
+| [![](https://www.google.com/s2/favicons?domain=any.digital&sz=64) Multi-line link <br> with favicon](#) | [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Multi-line link <br> with favicon](#) | `<a><i><img src="..."></i> Text</a>`            |
+| [<b class="fa-brands fa-github fa-lg"></b> Link with Font Awesome icon](#)                              | [<i class="fa-brands fa-github fa-lg"></i> Link with Font Awesome icon](#)                                     | `<a><i class="fa-..."></i> Text</a>`            |
 
 ---
 
