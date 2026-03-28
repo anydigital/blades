@@ -40,11 +40,11 @@ a {
 
 <!--section:docs-->
 
-Wrap emojis, favicons, or simply drop Font Awesome icons inside links using the Blades' `<i>` helper. It automatically handles sizing and alignment while preventing underlines. Compare:
+Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underlines. Compare:
 
 ---
 
-| Without Blades <hr>                                                                                 | With Blades' `<i>` helper <hr>                                                                             | Clean HTML without `<span>`ning      |
+| Without Blades <hr class="lg">                                                                      | With Blades' `<i>`-helper <hr class="lg">                                                                  | Clean HTML without `<span>ning` <hr class="x2"> |
 | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | [🥷 Link with emoji](#)                                                                             | [<i>🥷</i> Link with emoji](#)                                                                             | `<a><i>🥷</i> Text</a>`              |
 | [![](https://www.google.com/s2/favicons?domain=any.digital&sz=64) Longer link <br> with favicon](#) | [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Longer link <br> with favicon](#) | `<a><i><img src="..."></i> Text</a>` |

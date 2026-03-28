@@ -33,6 +33,9 @@ table {
       margin: 0;
       visibility: hidden;
 
+      &.lg {
+        width: 18ch;
+      }
       &.x2 {
         width: 24ch;
       }
