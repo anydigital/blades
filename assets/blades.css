@@ -282,32 +282,36 @@ ol {
 ```css */
 
 a {
-  /* Display as inline flex, if it contains an icon */
+  /* If link contains an icon, use inline flex */
   &:has(> i) {
     display: inline-flex;
-    align-items: center;
     gap: 0.375ch; /* =3/8 */
+    text-wrap: balance;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
-  }
-
-  /* Font Awesome specials */
-  &:has(> i[class^="fa-"]),
-  &:has(> i[class*=" fa-"]) {
-    gap: 0.125ch; /* =1/8 */
   }
 
   /* Helper to handle [fav]icons in links */
   > i {
     font-style: normal;
     float: left; /*                ✅ Chrome ❌ Safari */
-    text-underline-offset: 1em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
+    text-underline-offset: -2em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
 
+    /* Favicons */
     > img {
       height: 1.25em;
       margin-block: calc(-0.25em / 2);
+      display: inline-block; /* for Tailwind CSS Typography */
+    }
 
-      /* for tw-typography (.prose) */
-      display: inline-block;
+    /* Font Awesome */
+    &[class^="fa-"],
+    &[class*=" fa-"] {
+      line-height: inherit;
+      margin-inline-start: -0.25ch;
+      margin-inline-end: -0.125ch; /* =1/8 */
+    }
+    &.fa-lg {
+      line-height: normal;
     }
   }
 }
@@ -317,25 +321,15 @@ a {
 
 <!--section:docs-->
 
-Wrap icons, favicons, or even emojis inside links using simple `<i>`-helper to size them automatically and prevent underline. Compare:
+Wrap emojis, favicons, or simply drop Font Awesome icons inside links using the Blades' `<i>` helper. It automatically handles sizing and alignment while preventing underlines. Compare:
 
-<big class="grid">
-  <article><a href="https://blades.ninja/">   🥷     Blades</a></article>
-  <article><a href="https://blades.ninja/"><i>🥷</i> Blades</a></article>
-</big>
+---
 
-<big class="grid">
-  <article><a href="https://any.digital/">
-       <img src="https://www.google.com/s2/favicons?domain=any.digital&amp;sz=64">     any.digital
-  </a></article>
-  <article><a href="https://any.digital/">
-    <i><img src="https://www.google.com/s2/favicons?domain=any.digital&amp;sz=64"></i> any.digital
-  </a></article>
-</big>
-
-Or simply drop-in any Font Awesome icon (without wrapping it):
-
-<big><article><a href="https://github.com/anydigital/blades"><i class="fa-brands fa-github fa-lg"></i> /anydigital/blades</a></article></big>
+| Without Blades <hr>                                                                                 | With Blades' `<i>` helper <hr>                                                                             | Clean HTML without `<span>`ning      |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [🥷 Link with emoji](#)                                                                             | [<i>🥷</i> Link with emoji](#)                                                                             | `<a><i>🥷</i> Text</a>`              |
+| [![](https://www.google.com/s2/favicons?domain=any.digital&sz=64) Longer link <br> with favicon](#) | [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Longer link <br> with favicon](#) | `<a><i><img src="..."></i> Text</a>` |
+| [<b class="fa-brands fa-github fa-lg"></b> Link with Font Awesome icon](#)                          | [<i class="fa-brands fa-github fa-lg"></i> Link with Font Awesome icon](#)                                 | `<a><i class="fa-..."></i> Text</a>` |
 
 ---
 

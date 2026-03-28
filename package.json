@@ -1,6 +1,6 @@
 {
   "name": "@anydigital/blades",
-  "version": "0.27.0-beta.12",
+  "version": "0.27.0-beta.14",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
   "style": "./assets/blades.css",
   "exports": {
