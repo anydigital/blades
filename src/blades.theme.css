@@ -1,5 +1,14 @@
 /* <!--section:code-->
 ```css */
+body {
+  /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex-grow: 1;
+  }
+}
+
 a {
   &:not([href^="#"]) {
     text-decoration-thickness: 1px;

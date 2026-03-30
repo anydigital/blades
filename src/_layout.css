@@ -2,25 +2,14 @@
 <!--section:docs-->
 
 Global styles:
-- Prevent horizontal overflow and scrolling, modern way.
 ```css */
 html {
+  /* Prevent horizontal overflow and scrolling, modern way. */
   overflow-x: clip;
 }
-/*```
-
-### Landmarks
-- Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support).
-- Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts.
-```css */
 body {
+  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
   min-height: 100dvh;
-
-  display: flex;
-  flex-direction: column;
-  > main {
-    flex-grow: 1;
-  }
 }
 /*```
 
