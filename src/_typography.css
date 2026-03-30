@@ -90,14 +90,18 @@ ol {
     /* ⚠️ `data-marker` works only in Chrome and Firefox */
     content: attr(data-marker) " ";
   }
+}
+/*```
 
-  /* Helper class to remove list styling at all */
-  &.unlist {
-    padding-inline-start: 0;
+### Unlist
 
-    > li {
-      list-style: none;
-    }
+Helper class to remove list styling at all:
+```css */
+.unlist {
+  padding-inline-start: 0;
+
+  > li {
+    list-style: none;
   }
 }
 /*```
