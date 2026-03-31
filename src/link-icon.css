@@ -43,8 +43,6 @@ Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome i
 
 Compare:
 
----
-
 | Without Blades <hr class="lg">                                                                          | With Blades' `<i>`-helper <hr class="lg">                                                                      | Clean HTML without `<span>ning` <hr class="x2"> |
 | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [🥷 Link with emoji](#)                                                                                 | [<i>🥷</i> Link with emoji](#)                                                                                 | `<a><i>🥷</i> Text</a>`                         |
