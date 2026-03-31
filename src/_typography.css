@@ -1,5 +1,5 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs-->
+<!--section:docs-intro-->
 
 Global styles:
 ```css */
@@ -19,6 +19,7 @@ body {
   }
 }
 /*```
+<!--section:docs-->
 
 ### Heading anchors
 

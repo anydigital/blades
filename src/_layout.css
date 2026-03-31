@@ -1,5 +1,5 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-->
+<!--section:docs-intro-->
 
 Global styles:
 ```css */
@@ -12,6 +12,7 @@ body {
   min-height: 100dvh;
 }
 /*```
+<!--section:docs-->
 
 ### Auto-columns
 ```css */
