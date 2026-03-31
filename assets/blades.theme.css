@@ -1,5 +1,13 @@
 /* <!--section:code-->
 ```css */
+body {
+  /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex-grow: 1;
+  }
+}
 a {
   &:not([href^="#"]) {
     text-decoration-thickness: 1px;
@@ -57,7 +65,7 @@ table {
 [data-jump-to="top"] {
   > i {
     display: inline-block;
-    padding: 0.25rem;
+    padding: 0.25rem 0.375rem;
     margin: 0.5rem;
     font-size: 0.75rem;
     color: black;

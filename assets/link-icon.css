@@ -2,15 +2,13 @@
 <!--section:code-->
 ```css */
 a {
-  /* If link contains an icon, use inline flex */
+  /* Use inline flex only if link contains an icon */
   &:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
     text-wrap: balance;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
-
-  /* Helper to handle [fav]icons in links */
   > i {
     font-style: normal;
     float: left; /*                 ✅ Chrome ❌ Safari */
@@ -37,11 +35,13 @@ a {
 /*```
 > **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
+<!--section:docs,summary-->
+
+Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
+
 <!--section:docs-->
 
-Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons. Compare:
-
----
+Compare:
 
 | Without Blades <hr class="lg">                                                                          | With Blades' `<i>`-helper <hr class="lg">                                                                      | Clean HTML without `<span>ning` <hr class="x2"> |
 | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |

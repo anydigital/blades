@@ -3,34 +3,23 @@
 /* Layout */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-->
+<!--section:docs-intro-->
 
 Global styles:
-- Prevent horizontal overflow and scrolling, modern way.
 ```css */
 
 html {
+  /* Prevent horizontal overflow and scrolling, modern way. */
   overflow-x: clip;
 }
 
-/*```
-
-### Landmarks
-- Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support).
-- Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts.
-```css */
-
 body {
+  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
   min-height: 100dvh;
-
-  display: flex;
-  flex-direction: column;
-  > main {
-    flex-grow: 1;
-  }
 }
 
 /*```
+<!--section:docs-->
 
 ### Auto-columns
 ```css */
@@ -151,10 +140,14 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
   }
 }
 
-/*```<!--section:docs-->
+/*```
+<!--section:docs,summary-->
+
 Framework-agnostic utilities for breaking out images and figures beyond their container width.
 
-Use the `.breakout` class to allow elements to extend beyond their parent container:
+Use the `.breakout` class to allow elements to extend beyond their parent container.
+
+<!--section:docs-->
 
 ```html
 <div class="breakout">
@@ -163,12 +156,13 @@ Use the `.breakout` class to allow elements to extend beyond their parent contai
 ```
 
 The breakout container has `10%` inline padding and a max-width of `calc(10% + 65ch + 10%)`. The breakout utilities support images, pictures, figures, canvas, audio, video, tables, pre, iframe, and other media elements. Tables inside `.breakout` are specifically enhanced for horizontal scrolling and full-bleed mobile display. This is automatically included when you import the stylesheet.
+
 <!--section--> */
 
 /* Content */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs-->
+<!--section:docs-intro-->
 
 Global styles:
 ```css */
@@ -190,6 +184,7 @@ body {
 }
 
 /*```
+<!--section:docs-->
 
 ### Heading anchors
 
@@ -209,13 +204,14 @@ h6 {
   position: relative;
 
   [data-is-anchor] {
-    visibility: hidden;
     position: absolute;
-    top: 0;
     right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
     padding-right: 0.2ch;
     color: silver;
     text-decoration: none;
+    visibility: hidden;
   }
   /* Avoid double-tap on touch devices */
   @media (hover: hover) {
@@ -263,14 +259,20 @@ ol {
     /* ⚠️ `data-marker` works only in Chrome and Firefox */
     content: attr(data-marker) " ";
   }
+}
 
-  /* Helper class to remove list styling at all */
-  &.unlist {
-    padding-inline-start: 0;
+/*```
 
-    > li {
-      list-style: none;
-    }
+### Unlist
+
+Helper class to remove list styling at all:
+```css */
+
+.unlist {
+  padding-inline-start: 0;
+
+  > li {
+    list-style: none;
   }
 }
 
@@ -282,15 +284,13 @@ ol {
 ```css */
 
 a {
-  /* If link contains an icon, use inline flex */
+  /* Use inline flex only if link contains an icon */
   &:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
     text-wrap: balance;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
-
-  /* Helper to handle [fav]icons in links */
   > i {
     font-style: normal;
     float: left; /*                 ✅ Chrome ❌ Safari */
@@ -318,11 +318,13 @@ a {
 /*```
 > **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
+<!--section:docs,summary-->
+
+Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
+
 <!--section:docs-->
 
-Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons. Compare:
-
----
+Compare:
 
 | Without Blades <hr class="lg">                                                                          | With Blades' `<i>`-helper <hr class="lg">                                                                      | Clean HTML without `<span>ning` <hr class="x2"> |
 | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
@@ -383,8 +385,6 @@ table {
 }
 
 /*```
----
-
 ### Borderless table
 
 `<table class="borderless">` removes all default borders:
@@ -442,21 +442,24 @@ Soft-increase selector specificity trick:
 
 `table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 
+<!--section:docs,summary-->
+
+`<table class="responsive">` allows a table to full-bleed and scroll on mobile.
+
 <!--section:docs-->
 
-`<table class="responsive">` allows a table to full-bleed and scroll on mobile:
-<hr><div>
-
-| Term | Description <hr class="x2"> | Link |
-| --- | --- | --- |
+| Term              | Description <hr class="x2">                                                                                                                                                                  | Link                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | Responsive design | Approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. | https://en.wikipedia.org/wiki/Responsive_web_design |
 
 {.responsive}
-</div><hr>
+
+---
 
 Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
 Living examples:
+
 - https://any.digital/insights/ai-ide/
 - https://any.digital/insights/css-frameworks/
 - https://any.digital/insights/ssg/
