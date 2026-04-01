@@ -105,5 +105,41 @@ table {
     text-decoration-style: dotted;
   }
 }
+
+/*** Forms ***/
+
+/* Float label */
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
+.has-float-label {
+  /* Default/fallback state */
+  > span,
+  label {
+    padding-inline-start: calc(1rem + 1px); /* match Pico's padding + border */
+    padding-block-start: 0.25rem;
+    opacity: 75%;
+    transition: all 0.25s;
+  }
+  input,
+  textarea,
+  select {
+    margin-block-start: 0; /* reset Pico */
+    padding-inline-start: 1rem; /* match Pico */
+    padding-block: 1.125rem 0.375rem; /* match Pico's total: 2 x 0.75rem = 1.5rem */
+
+    &::placeholder {
+      opacity: 100%;
+      transition: all 0.25s;
+    }
+  }
+
+  /* Enlarged state */
+  &:has(*:placeholder-shown:not(:focus)) {
+    > span,
+    label {
+      padding-block: 0.75rem; /* match Pico */
+    }
+  }
+}
+
 /*```
 <!--section--> */
