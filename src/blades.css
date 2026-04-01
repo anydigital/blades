@@ -11,5 +11,8 @@
 @import "./responsive-table";
 @import "./_code";
 
+/* Forms */
+@import "./float-label";
+
 /* Utilities */
 @import "./_utilities";
