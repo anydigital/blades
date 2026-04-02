@@ -518,7 +518,7 @@ code {
 
 /* Forms */
 
-/* Moved here from https://github.com/anydigital/float-label-css
+/* Moved here from https://github.com/anydigital/float-label-css for easier maintenance
 <!--section:code-->
 ```css */
 
@@ -551,27 +551,6 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
 }
 
 /*```
-<!--section:docs-->
-
-<form>
-  <label>
-    <span>Name</span>
-    <input placeholder="First Last"/>
-  </label>
-  <label>
-    <span>Bio</span>
-    <textarea placeholder="Write a professional short bio..."></textarea>
-  </label>
-  <label>
-    <span>Cuisine</span>
-    <select>
-      <option selected disabled value="">Select your favorite cuisine...</option>
-      <option>Italian</option><option>Japanese</option><option>Indian</option><option>Thai</option><option>French</option>
-    </select>
-  </label>
-  <input type="submit" value="Subscribe"/>
-</form>
-
 <!--section--> */
 
 /* Utilities */
