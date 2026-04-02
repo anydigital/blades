@@ -5,7 +5,9 @@
   "style": "./assets/blades.css",
   "exports": {
     ".": "./src/blades.css",
+    "./core": "./src/blades.core.css",
     "./theme": "./src/blades.theme.css",
+    "./float-label": "./src/float-label.css",
     "./unreduce-motion": "./src/_unreduce-motion.css"
   },
   "scripts": {

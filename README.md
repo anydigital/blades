@@ -49,8 +49,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--prettier-ignore-->
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.min.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.theme.min.css" rel="stylesheet" /><!-- optional -->
+<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-beta/assets/blades.min.css" rel="stylesheet" />
 ```
 
 <mark>Via npm:</mark>
@@ -59,11 +58,10 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 npm install @anydigital/blades
 ```
 
-Then import in your .css:
+Then in your .css:
 
 ```css
 @import "@anydigital/blades";
-@import "@anydigital/blades.theme"; /* optional */
 ```
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
