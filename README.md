@@ -69,10 +69,14 @@ Then in your `.css`:
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
 
+<!--section:docs,install,install-preconf-->
+
 <mark>Preconfigured:</mark>
 
 - 11ty: https://github.com/anydigital/build-awesome-starter
 - Jekyll: https://github.com/anydigital/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
+
+<!--section:docs,install-->
 
 ##### Default theme <small>(optional)</small>
 
