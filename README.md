@@ -2,14 +2,14 @@
 
 <!--section:hero-->
 
-<hgroup>Framework-agnostic,<wbr> class-light CSS⁺ blade kit.</hgroup>
+<hgroup>Framework-agnostic,<wbr> class-light CSS<a href="https://blades.ninja/html/"><i>⁺</i></a> blade kit.</hgroup>
 
 <big>Use with Pico, Simple, Tailwind, or any other CSS reset/framework.</big>
 
 ![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=white&include_prereleases)
 [![](https://img.shields.io/github/stars/anydigital/blades?label=)](https://github.com/anydigital/blades)
 
-<!--section-->
+<!--section:gh-only-->
 
 Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
@@ -17,9 +17,9 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 ---
 
-<!--section:index-->
-
 ## <sup>Class-light</sup><br> [CSS blades](https://blades.ninja/css/) <br><sub>inspired by Pico.css</sub> <!--{#css}-->
+
+<!--section:css-->
 
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
@@ -42,7 +42,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <li><a href="https://blades.ninja/css/#unreduce-motion">Unreduce motion</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#theme-optional">Theme (optional)</a></li></ul>
 
-<!--section:index,install-css-->
+<!--section:css,css-install-->
 <details><summary role="button" class="outline"><b>Install CSS blades</b> via CDN or npm</summary>
 
 <mark>Via CDN:</mark>
@@ -67,9 +67,11 @@ Then in your .css:
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
 
 </details>
-<!--section:index-->
+<!--section:gh-only-->
 
 ---
+
+<!--section:html-->
 
 ## <sup>Nunjucks / Liquid</sup><br> [HTML blades](https://blades.ninja/html/) <br><sub>for 11ty/Build Awesome, Jekyll, etc.</sub>
 
@@ -80,7 +82,7 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 <!--{.columns}-->
 
-<!--section:index,install-html-->
+<!--section:html,html-install-->
 <details><summary role="button" class="outline"><b>Install HTML blades</b> via npm</summary>
 
 ```sh
@@ -107,10 +109,13 @@ That's it! Now you can use HTML blades in your templates like this:
 ```
 
 </details>
+<!--section:gh-only-->
 
 ---
 
-All CSS and HTML blades above are available as a Jekyll theme:
+<!--section:jekyll-->
+
+All [CSS](https://blades.ninja/css/) and [HTML](https://blades.ninja/html/) blades are available as a Jekyll theme:
 
 <details><summary role="button" class="outline"><b>Install as Jekyll theme</b></summary>
 
@@ -144,12 +149,11 @@ Or use a preconfigured template:
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
   - https://github.com/anydigital/build-awesome-starter
   - https://github.com/anydigital/bladeswitch starter
-  - https://github.com/hostfurl/minformhf starter
 - Showcase:
-  - https://any.digital/ (Pico ⁺ Blades)
-  - https://build.blades.ninja/ (Tailwind ⁺ Blades)
-  - https://bladeswitch.com/ (Pico ⁺ Blades)
-  - https://minform.hostfurl.com/ (Pico ⁺ Blades)
+  - https://any.digital/ (Pico + Blades)
+  - https://build.blades.ninja/ (Tailwind + Blades)
+  - https://bladeswitch.com/ (Pico + Blades)
+  - https://minform.hostfurl.com/ (Pico + Blades)
 - Credits:
   - https://picocss.com/ for inspiration
   - https://11ty.dev/ for build power
