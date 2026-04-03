@@ -38,7 +38,7 @@
 <li><a href="https://blades.ninja/css/#faded">Faded</a></li>
 <li><a href="https://blades.ninja/css/#invert">Invert</a></li>
 <li><a href="https://blades.ninja/css/#unreduce-motion">Unreduce motion</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#theme-optional">Theme (optional)</a></li></ul>
+</ul>
 
 ---
 
