@@ -6,7 +6,6 @@ a {
   &:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
-    text-wrap: balance;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
   > i {

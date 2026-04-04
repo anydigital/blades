@@ -174,6 +174,8 @@ html {
 }
 
 body {
+  /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
+  text-wrap: pretty;
   /* Enable global hyphenation */
   hyphens: auto;
   /* ... except for links and tables which are better (safer) without hyphenation */
@@ -288,7 +290,6 @@ a {
   &:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
-    text-wrap: balance;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
   > i {
@@ -519,15 +520,21 @@ code {
 /* Forms */
 
 /* Moved here from https://github.com/anydigital/float-label-css for easier maintenance
-<!--section:code-->
+<!--section:docs-->
+
+First, we target either:
+1. `<label>` which `:has` inner form inputs (classless approach)
+2. or explicit `.has-float-label` class (alternative approach)
 ```css */
 
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
   display: block;
   position: relative;
-
-  /* Default/fallback state when float label is minimized */
+  /*
+```
+Then, we define the default/fallback state (when the float label should be minimized):
+```css */
   > span,
   label {
     position: absolute;
@@ -536,8 +543,10 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
     cursor: text;
     font-size: 75%;
   }
-
-  /* Modern browser ? enlarge float label instead of placeholder : otherwise, code below is ignored in favor of default state above */
+  /*
+```
+Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
+```css */
   *:placeholder-shown:not(:focus)::placeholder {
     opacity: 0;
   }
@@ -550,7 +559,11 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
   }
 }
 
-/*```
+/*
+```
+The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.
+
+Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
 <!--section--> */
 
 /* Utilities */
