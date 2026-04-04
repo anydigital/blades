@@ -89,7 +89,7 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
   - https://github.com/uhub/awesome-css
   - 🕶️ [awesome-css-frameworks](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/tree/master/Lightweight)
   - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
-  - https://11tybundle.dev/showcase/
+  - https://sveltiacms.app/en/docs/start Sveltia CMS
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
   - https://github.com/anydigital/build-awesome-starter
   - https://github.com/anydigital/bladeswitch starter
