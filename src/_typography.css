@@ -10,6 +10,8 @@ html {
 }
 
 body {
+  /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
+  text-wrap: pretty;
   /* Enable global hyphenation */
   hyphens: auto;
   /* ... except for links and tables which are better (safer) without hyphenation */
