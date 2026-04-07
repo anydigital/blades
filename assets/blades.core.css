@@ -226,7 +226,7 @@ h6 {
 }
 
 /*```
-> **PRO-TIP** for 11ty + markdown-it-anchor: https://github.com/anydigital/eleventy-blades/blob/main/src/eleventy.config.js
+> **PRO-TIP** for 11ty + markdown-it-anchor: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
 
 ### List markers
 
@@ -519,7 +519,7 @@ code {
 
 /* Forms */
 
-/* Moved here from https://github.com/anydigital/float-label-css for easier maintenance
+/* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
 <!--section:docs-->
 
 First, we target either:

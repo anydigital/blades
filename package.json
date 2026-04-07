@@ -1,5 +1,5 @@
 {
-  "name": "@anydigital/blades",
+  "name": "@anyblades/blades",
   "version": "0.28.0-alpha.2",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
   "style": "./assets/blades.css",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anydigital/blades.git"
+    "url": "git+https://github.com/anyblades/blades.git"
   },
   "keywords": [
     "css",

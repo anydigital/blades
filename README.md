@@ -1,4 +1,4 @@
-# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=black&include_prereleases)</sup>
+# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=black&include_prereleases)</sup>
 
 <!--section:summary-->
 
@@ -47,30 +47,30 @@
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-beta/assets/blades.min.css
+  https://cdn.jsdelivr.net/npm/@anyblades/blades@^0.27.0-beta/assets/blades.min.css
 ">
 ```
 
 <mark>Via npm:</mark>
 
 ```sh
-npm install @anydigital/blades
+npm install @anyblades/blades
 ```
 
 Then in your `.css`:
 
 ```css
-@import "@anydigital/blades";
+@import "@anyblades/blades";
 ```
 
-Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
+Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_styles/styles.css
 
 <!--section:docs,install,install-preconf-->
 
 <mark>Preconfigured:</mark>
 
-- 11ty: https://github.com/anydigital/build-awesome-starter
-- Jekyll: https://github.com/anydigital/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
+- 11ty: https://github.com/anyblades/build-awesome-starter
+- Jekyll: https://github.com/anyblades/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
 
 <!--section:docs,install-->
 
@@ -87,10 +87,10 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
   - 🕶️ [awesome-css-frameworks](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/tree/master/Lightweight)
   - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
   - [https://11tybundle.dev/](https://11tybundle.dev/showcase/)
-  - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
+  - [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
   - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
-  - https://github.com/anydigital/build-awesome-starter
-  - https://github.com/anydigital/bladeswitch starter
+  - https://github.com/anyblades/build-awesome-starter
+  - https://github.com/anyblades/bladeswitch starter
 - Showcase:
   - https://any.digital/ (Pico + Blades)
   - https://build.blades.ninja/ (Tailwind + Blades)

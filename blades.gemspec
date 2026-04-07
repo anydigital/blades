@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Anton Staroverov"]
 
   spec.summary       = "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development."
-  spec.homepage      = "https://github.com/anydigital/blades"
+  spec.homepage      = "https://github.com/anyblades/blades"
   spec.license       = "MIT"
 
   spec.files = Dir.glob("{_includes,assets}/**/*")
