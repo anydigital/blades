@@ -4,7 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <link rel="icon" href="{{ site.favicon | default: '/favicon.ico' }}">
+    <link rel="icon" href="{{ site.favicon | default: '/favicon.svg' }}">
+    <link rel="alternate icon" href="{{ site.favicon_alt | default: '/favicon.png' }}" type="image/png">
     <title>
       {%- if title %}{{ title | strip_html | append: ' | ' }}{% endif -%}
       {{- site.title -}}
