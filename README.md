@@ -14,7 +14,7 @@
 
 <!--section:docs-->
 
-## Documentation
+## [Documentation →](https://blades.ninja/css/)
 
 <!--section:docs,toc-->
 <!--
