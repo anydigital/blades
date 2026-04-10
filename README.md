@@ -12,15 +12,17 @@
 
 ---
 
+<!--section:docs-->
+
 ## Documentation
 
 <!--section:docs,toc-->
-
 <!--
 1. copy-paste ToC from https://blades.ninja/css/
 2. replace `href="` => `href="https://blades.ninja`
 -->
 <ul class="unlist columns">
+<li><a href="https://blades.ninja#install" tabindex="-1">Install</a></li>
 <li><a href="https://blades.ninja#layout" tabindex="-1">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/" tabindex="-1">Breakout elements →</a></li>
 <li><a href="https://blades.ninja#auto-columns" tabindex="-1">Auto-columns</a></li>
 <li><a href="https://blades.ninja#jump-to-top" tabindex="-1">Jump to top</a></li></ul></li>
@@ -37,13 +39,13 @@
 <li><a href="https://blades.ninja#faded" tabindex="-1">Faded</a></li>
 <li><a href="https://blades.ninja#invert" tabindex="-1">Invert</a></li></ul></li></ul>
 
-<!--section:docs-->
+<!--section:gh-only-->
 
 ---
 
 ## Install
 
-<!--section:docs,install-->
+<!--section:install-->
 
 <mark>Via CDN:</mark>
 
@@ -68,7 +70,7 @@ Then in your `.css`:
 
 Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_styles/styles.css
 
-<!--section:docs,install,install-preconf-->
+<!--section:install,install-preconf-->
 
 <mark>Preconfigured:</mark>
 
@@ -76,7 +78,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - 11ty: https://github.com/anyblades/build-awesome-starter
 - Jekyll: https://github.com/anyblades/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
 
-<!--section:docs,install-->
+<!--section:install-->
 
 ##### Default theme <small>(optional)</small>
 
