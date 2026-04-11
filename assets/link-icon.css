@@ -17,6 +17,7 @@ a {
     > img {
       height: 1.25em;
       margin-block-start: calc(-0.25em / 2);
+      max-width: none; /* to keep ratio safe */
       display: inline-block; /* for Tailwind CSS Typography */
     }
 

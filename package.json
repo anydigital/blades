@@ -1,6 +1,6 @@
 {
   "name": "@anyblades/blades",
-  "version": "0.28.0-alpha.3",
+  "version": "0.28.0-alpha.4",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
   "style": "./assets/blades.css",
   "exports": {

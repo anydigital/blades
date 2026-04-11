@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "blades"
-  spec.version       = "0.28.0-alpha.3"
+  spec.version       = "0.28.0-alpha.4"
   spec.authors       = ["Anton Staroverov"]
 
   spec.summary       = "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development."
