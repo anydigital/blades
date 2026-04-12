@@ -45,16 +45,13 @@ table {
 /*```
 ### Borderless table
 
-`<table class="borderless">` removes all default borders:
-
-<article>
+`.borderless` removes all default borders:
 
 | Less | borders |
 | ---- | ------- |
 | more | fun     |
 
 {.borderless}
-</article>
 
 Living example: https://bladeswitch.com/#minimal-dependencies table
 

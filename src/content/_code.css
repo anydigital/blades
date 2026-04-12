@@ -47,7 +47,9 @@ code {
 
 The `<pre><code>` blocks are Prism-compatible and can have a `data-caption` attribute to display a caption:
 
-```css {data-caption=your.css}
-@import "@anyblades/blades";
+```treeview {data-caption="Key Blades CSS files:"}
+├── blades.core.css     # reusable class-light utilities, unthemed
+├── blades.theme.css    # minimal opinionated theme
+└── blades.css          # above two together
 ```
 <!--section--> */
