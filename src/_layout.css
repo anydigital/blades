@@ -16,9 +16,7 @@ body {
 
 ### Auto-columns
 ```css */
-.columns,
-[data-is-toc] > ul,
-[data-is-toc] > ol {
+.columns {
   columns: 30ch auto; /* 2 cols max for 65ch container */
 
   /* Avoid breaking inside elements, such as nested lists */
@@ -27,8 +25,6 @@ body {
   }
 }
 /*```
-
-Table of contents (`[data-is-toc]`) has auto-columns by default.
 
 ### Jump to top
 ```css */

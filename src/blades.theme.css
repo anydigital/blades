@@ -6,6 +6,7 @@ body {
   /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
   display: flex;
   flex-direction: column;
+
   > main {
     flex-grow: 1;
   }
@@ -14,6 +15,7 @@ body {
 a {
   &:not([href^="#"]) {
     text-decoration-thickness: 1px;
+
     &:hover {
       text-decoration-thickness: 2px;
     }
@@ -80,17 +82,6 @@ table {
     font-size: 0.75rem;
     color: black;
     border-color: black;
-  }
-}
-
-[data-is-toc] {
-  font-size: 87.5%;
-
-  a {
-    text-decoration: none;
-  }
-  > ul > * > a {
-    font-weight: 500;
   }
 }
 
