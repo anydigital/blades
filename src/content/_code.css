@@ -1,4 +1,5 @@
-/* <!--section:docs-->
+/*
+<!--section:docs-->
 ### Code
 Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
 ```css */
@@ -28,7 +29,7 @@ code {
   }
 }
 
-/*** Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css ***/
+/* Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css */
 .token.treeview-part {
   .entry-line {
     width: 2.5em !important;
@@ -42,4 +43,5 @@ code {
     }
   }
 }
-/*``` <!--section--> */
+/*```
+<!--section--> */
