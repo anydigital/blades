@@ -28,7 +28,7 @@
       {{ site.inline_scripts | d([]) | join('\n') }}
     </script>{# prettier-ignore-end #}
 
-    {{ content_for_header }}
+    {{ content_for_header | safe }}
     {% include 'blades/gtm.njk' %}
   </head>
 
