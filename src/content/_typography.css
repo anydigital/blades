@@ -1,26 +1,4 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs-intro-->
-
-Global styles:
-```css */
-html {
-  /* Enable font smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
-  text-wrap: pretty;
-  /* Enable global hyphenation */
-  hyphens: auto;
-  /* ... except for links and tables which are better (safer) without hyphenation */
-  a,
-  table {
-    hyphens: none;
-  }
-}
-/*```
 <!--section:docs-->
 
 ### Heading anchors
