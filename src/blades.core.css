@@ -5,11 +5,11 @@
 @import "./breakout";
 
 /* Content */
-@import "./_typography";
+@import "./content/_typography";
 @import "./link-icon";
-@import "./_table";
+@import "./content/_table";
 @import "./responsive-table";
-@import "./_code";
+@import "./content/_code";
 
 /* Forms */
 @import "./float-label.core";
