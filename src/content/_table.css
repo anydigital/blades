@@ -1,27 +1,22 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
 <!--section:docs-->
 
-### Horizontal expanders
+### Column expanders
 
-Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especially useful in markdown):
-```html
-<th>Col <hr></th>
-```
-Example table before:
-<article class="overflow-auto"><table>
-  <tr><th>Wide tables</th><th>with many</th><th>columns might</th><th>get collapsed</th><th>and be really</th><th>hard to read!</th></tr>
-</table></article>
+`<hr>` elements inside `<th>` expand table columns by width:
 
-Same table after adding `<hr>`-expanders:
-<article class="overflow-auto"><table>
-  <tr><th>Wide tables <hr></th><th>with many <hr></th><th>columns might <hr></th><th>get collapsed <hr></th><th>and be really <hr></th><th>hard to read! <hr></th></tr>
-</table></article>
+<article style="max-width: 30ch">
+
+| Column with `<hr>` <hr> | Same column without `<hr>` |
+| --- | --- |
+| (012) 345-6789 | (012) 345-6789 |
+</article>
 
 Living examples of big tables with `<hr>`-expanders:
-- https://any.digital/insights/ai-ide/
-- https://any.digital/insights/css-frameworks/
-- https://any.digital/insights/ssg/
-- https://blades.ninja/build-awesome-11ty/#min-starters
+- https://blades.ninja/ai/ide/
+- https://blades.ninja/build-awesome-11ty/starters/
+- https://blades.ninja/css/frameworks/
+- https://blades.ninja/ssg/
 
 How it works:
 ```css */

@@ -35,7 +35,7 @@ a {
 /*```
 > **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
-<!--section:docs,summary-->
+<!--section:summary-->
 
 Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
 
