@@ -3,13 +3,15 @@
 
 ### Column expanders
 
-`<hr>` elements inside `<th>` expand table columns by width:
+Place `<hr>` element inside `<th>` column to expand it horizontally:
 
-<article style="max-width: 30ch">
+<article>
 
 | Column with `<hr>` <hr> | Same column without `<hr>` |
 | --- | --- |
 | (012) 345-6789 | (012) 345-6789 |
+
+{style=max-width:30ch}
 </article>
 
 Living examples of big tables with `<hr>`-expanders:
@@ -42,11 +44,14 @@ table {
 
 `.borderless` removes all default borders:
 
+<article>
+
 | Less | borders |
 | ---- | ------- |
 | more | fun     |
 
 {.borderless}
+</article>
 
 Living example: https://bladeswitch.com/#minimal-dependencies table
 

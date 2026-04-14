@@ -3,9 +3,11 @@
 
 ### Heading anchors
 
-Set `data-is-anchor` attribute on anchors inside headings to position them absolutely, and show only on hover (when supported):
+Links with `href="#..."` inside headings are automatically displayed as anchors:
 
-<article><h2>Heading with anchor <a href="#hwa" data-is-anchor>#</a></h2></article>
+<article>
+  <h2 style="margin: 0 0 0 2rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
+</article>
 
 How it works:
 ```css */
@@ -36,19 +38,24 @@ h6 {
   }
 }
 /*```
-> **PRO-TIP** for 11ty + markdown-it-anchor: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+
 
 ### List markers
 
-Use inline `style="--list-marker:'🥷 '"` on `<ul>/<ol>` or even individual `<li>` to customize list markers:
+Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
+
 <article>
 
-- Customize
-- list
-- markers
-- with [Blades CSS](https://blades.ninja/css/) {style="--list-marker:'🥷 '"}
+- you
+- can
+- make
+- really
+- cool markers {style="--list-marker:'🧊 '"}
+- with
+- *Bl*ades {style="--list-marker:'🥷 '"}
 
-{style="--list-marker:'🧊 '"}
+{style="--list-marker:'→ '"}
 </article>
 
 How it works:
