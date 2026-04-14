@@ -83,18 +83,19 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - Featured by:
   - https://github.com/uhub/awesome-css
   - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
-  - https://github.com/anydigital/awesome-11ty-build-awesome
+  - https://github.com/anyblades/awesome-11ty-build-awesome
   - https://11tybundle.dev/blog/11ty-bundle-88/
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
   - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
   - ✨ [pico.css](https://github.com/anyblades/pico) community fork
   - 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
   - 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
+
 - Showcase:
-  - https://any.digital/ (Pico + Blades)
-  - https://build.blades.ninja/ (Tailwind + Blades)
-  - https://bladeswitch.com/ (Pico + Blades)
-  - https://minform.hostfurl.com/ (Pico + Blades)
+  - https://any.digital/ = <abbr data-tooltip="Pico CSS + Blades">✨ + 🥷</abbr>
+  - https://build.blades.ninja/ = <abbr data-tooltip="Tailwind CSS + Typography plugin + Blades">💨 + 🥷</abbr>
+  - https://bladeswitch.com/ = <abbr data-tooltip="Pico CSS + Blades">✨ + 🥷</abbr>
+  - https://minform.hostfurl.com/ = <abbr data-tooltip="Pico CSS + Blades">✨ + 🥷</abbr>
 
 - Credits:
   - https://picocss.com/ for inspiration
