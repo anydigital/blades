@@ -1,5 +1,6 @@
 /*
-<!--section:code-->
+<!--section:how-->
+<details>How it works:
 ```css */
 table.responsive,
 .breakout > table:not(.does-not-exist),
@@ -25,14 +26,15 @@ table.responsive,
   }
 }
 /*```
-<!--#TODO:css-blade-->
-Soft-increase selector specificity trick:
+</details>
+
+#### Soft-increase selector specificity trick
 
 `table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 
 <!--section:summary-->
 
-`.responsive` makes a table full-bleed and scroll on mobile.
+`.responsive` makes a table full-bleed and scroll on mobile, without a need for a redundant wrapper (finally).
 
 <!--section:docs-->
 
@@ -46,11 +48,11 @@ Soft-increase selector specificity trick:
 
 Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
-Living examples:
+Living examples: <!--A-Z-->
 
-- https://any.digital/insights/ai-ide/
-- https://any.digital/insights/css-frameworks/
-- https://any.digital/insights/ssg/
-- https://blades.ninja/build-awesome-11ty/#min-starters
+- https://blades.ninja/ai/ide/
+- https://blades.ninja/build-awesome-11ty/starters/
+- https://blades.ninja/css/frameworks/
+- https://blades.ninja/ssg/
 
 <!--section--> */
