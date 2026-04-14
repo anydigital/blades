@@ -92,10 +92,10 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
   - 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
 
 - Showcase:
-  - https://any.digital/ = <abbr data-tooltip="Pico CSS + Blades">✨ + 🥷</abbr>
-  - https://build.blades.ninja/ = <abbr data-tooltip="Tailwind CSS + Typography plugin + Blades">💨 + 🥷</abbr>
-  - https://bladeswitch.com/ = <abbr data-tooltip="Pico CSS + Blades">✨ + 🥷</abbr>
-  - https://minform.hostfurl.com/ = <abbr data-tooltip="Pico CSS + Blades">✨ + 🥷</abbr>
+  - <abbr data-tooltip="Pico CSS + Blades">✨+🥷</abbr> = https://any.digital/
+  - <abbr data-tooltip="Tailwind CSS + Typography plugin + Blades">💨+🥷</abbr> = https://build.blades.ninja/
+  - <abbr data-tooltip="Pico CSS + Blades">✨+🥷</abbr> = https://bladeswitch.com/
+  - <abbr data-tooltip="Pico CSS + Blades">✨+🥷</abbr> = https://minform.hostfurl.com/
 
 - Credits:
   - https://picocss.com/ for inspiration
