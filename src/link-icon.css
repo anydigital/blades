@@ -48,11 +48,11 @@ Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome 
 
 <article class="breakout-item">
 
-| Use `<i>`-helper with                                                                      | Clean HTML without `<span>ning` |
-| -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [<i>🥷</i> Emojis](#)                                                                                 | `<a><i>🥷</i> Text</a>`                         |
-| [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Favicons](#) | `<a><i><img src="..."></i> Text</a>`            |
-| [<i class="fa-brands fa-github fa-lg"></i> Font Awesome icons](#)                                     | `<a><i class="fa-..."></i> Text</a>`            |
+| Use `<i>`-helper with                                                                 | Clean HTML without `<span>ning`      |
+| ------------------------------------------------------------------------------------- | ------------------------------------ |
+| [<i>🥷</i> Emojis](#)                                                                 | `<a><i>🥷</i> Text</a>`              |
+| [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Favicons](#) | `<a><i><img src="..."></i> Text</a>` |
+| [<i class="fa-brands fa-github fa-lg"></i> Font Awesome icons](#)                     | `<a><i class="fa-..."></i> Text</a>` |
 </article>
 
 Or even:
