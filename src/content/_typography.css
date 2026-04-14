@@ -6,7 +6,7 @@
 Links with `href="#..."` inside headings are automatically displayed as anchors:
 
 <article>
-  <h2 style="margin: 0 0 0 2rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
+  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
 </article>
 
 <details>How it works:

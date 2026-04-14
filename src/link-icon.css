@@ -1,5 +1,6 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:code-->
+<!--section:how-->
+<details>How it works:
 ```css */
 a {
   /* Use inline flex only if link contains an icon */
@@ -33,24 +34,31 @@ a {
   }
 }
 /*```
-> **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+</details>
+
+How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
+
+**PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
 <!--section:summary-->
 
-Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
+Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
 
 <!--section:docs-->
 
-Compare:
+<article class="breakout-item">
 
-| Without Blades <hr class="lg">                                                                          | With Blades' `<i>`-helper <hr class="lg">                                                                      | Clean HTML without `<span>ning` <hr class="x2"> |
-| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [🥷 Link with emoji](#)                                                                                 | [<i>🥷</i> Link with emoji](#)                                                                                 | `<a><i>🥷</i> Text</a>`                         |
-| [![](https://www.google.com/s2/favicons?domain=any.digital&sz=64) Multi-line link <br> with favicon](#) | [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Multi-line link <br> with favicon](#) | `<a><i><img src="..."></i> Text</a>`            |
-| [<b class="fa-brands fa-github fa-lg"></b> Link with Font Awesome icon](#)                              | [<i class="fa-brands fa-github fa-lg"></i> Link with Font Awesome icon](#)                                     | `<a><i class="fa-..."></i> Text</a>`            |
+| Use `<i>`-helper with                                                                      | Clean HTML without `<span>ning` |
+| -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [<i>🥷</i> Emojis](#)                                                                                 | `<a><i>🥷</i> Text</a>`                         |
+| [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Favicons](#) | `<a><i><img src="..."></i> Text</a>`            |
+| [<i class="fa-brands fa-github fa-lg"></i> Font Awesome icons](#)                                     | `<a><i class="fa-..."></i> Text</a>`            |
+</article>
 
----
+Or even:
 
-[How we made it ↗ &nbsp;<small>(on Codepen)</small>](https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237){role=button .outline}
+<article>
+  <a href="#" style="margin: 0 0 0 1rem"><i>🥷</i> very-very-very-very-very-<br>long-multiline-links</a>
+</article>
 
 <!--section--> */
