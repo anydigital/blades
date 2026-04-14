@@ -20,7 +20,7 @@ Living examples of big tables with `<hr>`-expanders:
 - https://blades.ninja/css/frameworks/
 - https://blades.ninja/ssg/
 
-How it works:
+<details>How it works:
 ```css */
 table {
   th {
@@ -40,6 +40,8 @@ table {
   }
 }
 /*```
+</details>
+
 ### Borderless table
 
 `.borderless` removes all default borders:

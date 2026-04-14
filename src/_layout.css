@@ -17,7 +17,7 @@ The smaller the font size, the more columns will be created:
 
 Useful for tables of contents and long lists.
 
-How it works:
+<details>How it works:
 ```css */
 .columns {
   columns: 30ch auto; /* 2 cols max for 65ch container */
@@ -28,6 +28,7 @@ How it works:
   }
 }
 /*```
+</details>
 
 ### Jump to top
 

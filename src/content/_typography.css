@@ -9,7 +9,7 @@ Links with `href="#..."` inside headings are automatically displayed as anchors:
   <h2 style="margin: 0 0 0 2rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
 </article>
 
-How it works:
+<details>How it works:
 ```css */
 h1,
 h2,
@@ -38,8 +38,9 @@ h6 {
   }
 }
 /*```
-**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+</details>
 
+**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
 
 ### List markers
 
@@ -58,7 +59,7 @@ Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or eve
 {style="--list-marker:'→ '"}
 </article>
 
-How it works:
+<details>How it works:
 ```css */
 ul,
 ol {
@@ -79,6 +80,7 @@ ol {
   }
 }
 /*```
+</details>
 
 ### Unlist
 

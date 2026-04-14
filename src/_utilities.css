@@ -10,7 +10,7 @@
   <button class="contrast">Contrast button</button>
 </article>
 
-How it works:
+<details>How it works:
 ```css */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -20,6 +20,7 @@ How it works:
   }
 }
 /*```
+</details>
 
 ### Faded
 ```css */

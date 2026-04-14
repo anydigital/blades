@@ -1,5 +1,17 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
-<!--section:code-->
+<!--section:docs-->
+
+### Code
+
+The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
+
+```treeview {data-caption="Key Blades CSS files:"}
+├── blades.core.css     # reusable class-light utilities, unthemed
+├── blades.theme.css    # minimal opinionated theme
+└── blades.css          # above two together
+```
+
+<details>How it works:
 ```css */
 pre {
   padding: 1rem 1.5rem;
@@ -42,14 +54,5 @@ code {
   }
 }
 /*```
-<!--section:docs-->
-### Code
-
-The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
-
-```treeview {data-caption="Key Blades CSS files:"}
-├── blades.core.css     # reusable class-light utilities, unthemed
-├── blades.theme.css    # minimal opinionated theme
-└── blades.css          # above two together
-```
+</details>
 <!--section--> */
