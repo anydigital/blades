@@ -46,16 +46,16 @@
 
 <!--section:install-->
 
-<mark>Via CDN:</mark>
+###### <mark>Via CDN</mark>
 
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@^0.27.0-beta/assets/blades.min.css
+  https://cdn.jsdelivr.net/npm/@anyblades/blades@^0.28.0-alpha/assets/blades.min.css
 ">
 ```
 
-<mark>Via npm:</mark>
+###### <mark>Via npm</mark>
 
 ```sh
 npm install @anyblades/blades
@@ -71,7 +71,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <!--section:install,install-preconf-->
 
-<mark>Preconfigured:</mark>
+###### <mark>Preconfigured</mark>
 
 - Pico: https://github.com/anyblades/pico
 - 11ty: https://github.com/anyblades/build-awesome-starter
@@ -79,9 +79,9 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <!--section:install-->
 
-##### Default theme <small>(optional)</small>
+###### Theme <small>(optional)</small>
 
-`blades.css` includes default minimal styling; use `blades.core.css` to opt out.
+`blades.css` includes default minimal styling; use `blades.core.css` to opt-out.
 
 <!--section:docs-->
 
