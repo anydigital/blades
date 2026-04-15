@@ -44,7 +44,7 @@
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@^0.28.0-alpha/assets/blades.min.css
+  https://cdn.jsdelivr.net/npm/@anyblades/blades@0/assets/blades.min.css
 ">
 ```
 
