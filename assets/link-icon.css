@@ -1,42 +1,34 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
 <!--section:code-->
 ```css */
-a {
-  /* Use inline flex only if link contains an icon */
-  &:has(> i) {
+/* Use inline flex only if link contains an icon */
+a:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
-  > i {
+a > i {
     font-style: normal;
     float: left; /*                 ✅ Chrome ❌ Safari */
     text-underline-offset: -2em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
-
-    /* Favicons */
-    > img {
+  }
+/* Favicons */
+a > i > img {
       height: 1.25em;
       margin-block-start: calc(-0.25em / 2);
       max-width: none; /* to keep ratio safe */
       display: inline-block; /* for Tailwind CSS Typography */
     }
-
-    /* Font Awesome */
-    &[class^="fa-"],
-    &[class*=" fa-"] {
+a > i[class^="fa-"],
+    a > i[class*=" fa-"] {
       line-height: inherit;
       --fa-width: auto;
     }
-    &.fa-lg {
+/* Font Awesome */
+a > i.fa-lg {
       line-height: normal;
     }
-  }
-}
 /*```
-How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
-
-**PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
-
 <!--section:summary-->
 
 Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links.
@@ -58,5 +50,9 @@ Or even for:
 <article>
   <a href="#" style="margin: 0 0 0 1rem"><i>🥷</i> very-very-very-very-very-<br>long-multiline-links</a>
 </article>
+
+How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
+
+**PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
 <!--section--> */

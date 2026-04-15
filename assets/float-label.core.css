@@ -9,33 +9,45 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
 .has-float-label {
   display: block;
   position: relative;
-  /*
+}
+/*
 ```
 Then, we define the default/fallback state (when the float label should be minimized):
 ```css */
-  > span,
-  label {
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
+  .has-float-label > span,
+  .has-float-label label {
     position: absolute;
     left: 0;
     top: 0;
     cursor: text;
     font-size: 75%;
   }
-  /*
+/*
 ```
 Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
 ```css */
-  *:placeholder-shown:not(:focus)::placeholder {
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
     opacity: 0;
   }
-  &:has(*:placeholder-shown:not(:focus)) {
-    > span,
-    label {
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:-moz-placeholder:not(:focus)::placeholder, .has-float-label *:-moz-placeholder:not(:focus)::placeholder {
+    opacity: 0;
+  }
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::placeholder, .has-float-label *:placeholder-shown:not(:focus)::placeholder {
+    opacity: 0;
+  }
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
       font-size: inherit;
       opacity: 50%;
     }
-  }
-}
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
+    label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) > span,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) label {
+      font-size: inherit;
+      opacity: 50%;
+    }
 /*
 ```
 The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.

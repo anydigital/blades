@@ -6,51 +6,52 @@
   /* Prepare the container for breakout elements */
   padding-inline: 10%;
   max-width: calc(10% + 65ch + 10%);
-
-  /* Breakout direct children only */
-  & > * {
-    &:is(
+}
+/* Breakout direct children only */
+.breakout > *:is(
       table,
       pre,
       figure, video, iframe, canvas,
       img, picture,
-      /* Custom utility classes for other tags that need to be broken out */
+      
+      .breakout-item,
+      .breakout-item-max
+    ),
+      .breakout-all > *:is(
+      table,
+      pre,
+      figure, video, iframe, canvas,
+      img, picture,
+      
       .breakout-item,
       .breakout-item-max
     ) {
+      width: -moz-fit-content;
       width: fit-content;
       min-width: 100%;
       max-width: 125%;
       margin-left: 50%;
       transform: translateX(-50%);
     }
-
-    /* Respect img/picture min-width */
-    &:is(img, picture) {
+/* Respect img/picture min-width */
+.breakout > *:is(img, picture), .breakout-all > *:is(img, picture) {
       min-width: auto;
     }
-
-    /* Max out the width of the element */
-    &.breakout-item-max {
+/* Max out the width of the element */
+.breakout > *.breakout-item-max, .breakout-all > *.breakout-item-max {
       width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */
     }
-  }
-}
-.breakout-all > * {
-  &:is(h2, h3, h4, h5, h6, hr):not([class]) {
+.breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class]) {
     position: relative;
-
-    &::before {
+  }
+.breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class])::before {
       content: "";
       display: block;
       position: absolute;
       background: gray;
       opacity: 12.5%;
     }
-  }
-
-  &:is(h2, h3, h4, h5, h6):not([class]) {
-    &::before {
+.breakout-all > *:is(h2, h3, h4, h5, h6):not([class])::before {
       width: 10em;
       right: 100%;
       margin-right: 0.8ch;
@@ -59,27 +60,21 @@
       transform: translateY(-50%);
       background: linear-gradient(to left, gray, transparent);
     }
-
-    /* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
-    &:where(hr + *) {
-      &::before {
+/* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
+.breakout-all > *:is(h2, h3, h4, h5, h6):not([class]):where(hr + *)::before {
         display: none !important;
       }
-    }
-  }
-  &:is(hr) {
+.breakout-all > *:is(hr) {
     height: 0.5rem;
     border: none;
     overflow: visible;
-
-    &::before {
+  }
+.breakout-all > *:is(hr)::before {
       width: 100vw;
       left: 50%;
       height: 100%;
       transform: translateX(-50%);
     }
-  }
-}
 /*```
 <!--section:summary-->
 

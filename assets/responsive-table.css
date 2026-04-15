@@ -9,6 +9,7 @@ table.responsive,
   transform: translateX(-50%);
 
   /* Let them full-bleed */
+  width: -moz-max-content;
   width: max-content;
   min-width: auto;
   max-width: 100vw;
@@ -18,12 +19,15 @@ table.responsive,
   display: block;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
-
-  th,
-  td {
+}
+table.responsive th,
+  table.responsive td,
+  .breakout > table:not(.does-not-exist) th,
+  .breakout > table:not(.does-not-exist) td,
+  .breakout-all > table:not(.does-not-exist) th,
+  .breakout-all > table:not(.does-not-exist) td {
     padding-inline-start: 0;
   }
-}
 /*```
 `table:not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 

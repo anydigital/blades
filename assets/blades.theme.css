@@ -1,37 +1,45 @@
 /*
 <!--section:code-->
 ```css */
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
-.has-float-label {
-  /* Default/fallback state */
-  > span,
-  label {
+/* Default/fallback state */
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
+  .has-float-label > span,
+  .has-float-label label {
     padding-inline-start: calc(1rem + 1px); /* match Pico's padding + border */
     padding-block-start: 0.25rem;
     opacity: 75%;
     transition: all 0.25s;
   }
-  input,
-  textarea,
-  select {
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) input,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) textarea,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) select,
+  .has-float-label input,
+  .has-float-label textarea,
+  .has-float-label select {
     margin-block-start: 0; /* reset Pico */
     padding-inline-start: 1rem; /* match Pico */
     padding-block: 1.125rem 0.375rem; /* match Pico's total: 2 x 0.75rem = 1.5rem */
-
-    &::placeholder {
+  }
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) input::-moz-placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) textarea::-moz-placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) select::-moz-placeholder, .has-float-label input::-moz-placeholder, .has-float-label textarea::-moz-placeholder, .has-float-label select::-moz-placeholder {
+      opacity: 100%;
+      -moz-transition: all 0.25s;
+      transition: all 0.25s;
+    }
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) input::placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) textarea::placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) select::placeholder, .has-float-label input::placeholder, .has-float-label textarea::placeholder, .has-float-label select::placeholder {
       opacity: 100%;
       transition: all 0.25s;
     }
-  }
-
-  /* Enlarged state */
-  &:has(*:placeholder-shown:not(:focus)) {
-    > span,
-    label {
+/* Enlarged state */
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
       padding-block: 0.75rem; /* match Pico */
     }
-  }
-}
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
+    label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) > span,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) label {
+      padding-block: 0.75rem; /* match Pico */
+    }
 html {
   /* Prevent horizontal overflow and scrolling, modern way. */
   overflow-x: clip;
@@ -47,30 +55,29 @@ body {
   /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
   display: flex;
   flex-direction: column;
-  > main {
-    flex-grow: 1;
-  }
 
   /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
-  text-wrap: pretty;
 
   /* Enable global hyphenation */
-  hyphens: auto;
   /* ... except for links and tables which are better (safer) without hyphenation */
-  a,
-  table {
+}
+body > main {
+    flex-grow: 1;
+  }
+body {
+  text-wrap: pretty;
+  hyphens: auto;
+}
+body a,
+  body table {
     hyphens: none;
   }
-}
-a {
-  &:not([href^="#"]) {
+a:not([href^="#"]) {
     text-decoration-thickness: 1px;
-
-    &:hover {
+  }
+a:not([href^="#"]):hover {
       text-decoration-thickness: 2px;
     }
-  }
-}
 h1 {
   font-size: 2.5em; /* for pico.css & tw-typography */
   margin-bottom: 1rem; /* for tw-typography */
@@ -78,36 +85,30 @@ h1 {
 hr {
   margin-block: 2em; /* for pico.css & tw-typography */
 }
-ul {
-  ul {
+ul ul {
     font-size: 87.5%;
   }
-}
-pre {
-  small {
+pre small {
     opacity: 75%;
     font-weight: lighter;
   }
-}
-table {
-  th {
+table th {
     vertical-align: bottom;
     font-weight: bold;
   }
-  td {
+table td {
     vertical-align: top;
   }
-  pre {
+table pre {
     margin-bottom: 0.25rem;
   }
-}
 [data-jump-to="top"] {
   opacity: 25%;
-  &:hover {
+}
+[data-jump-to="top"]:hover {
     opacity: 75%;
   }
-
-  > i {
+[data-jump-to="top"] > i {
     display: inline-block;
     padding: 0.25rem 0.375rem;
     margin: 0.5rem;
@@ -115,18 +116,14 @@ table {
     color: black;
     border-color: black;
   }
-}
-.breakout,
-.breakout-all {
-  > img,
-  > figure {
+.breakout > img,
+  .breakout > figure,
+  .breakout-all > img,
+  .breakout-all > figure {
     margin-bottom: 1rem;
   }
-}
-.faded {
-  a {
+.faded a {
     text-decoration-style: dotted;
   }
-}
 /*```
 <!--section--> */
