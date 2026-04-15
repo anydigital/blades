@@ -5,19 +5,19 @@
 
 The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
 
-```treeview {data-caption="Key Blades CSS files:"}
+```treeview {data-caption="Blades CSS:"}
+./assets/
 ├── blades.core.css     # reusable class-light utilities, unthemed
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-
 <details>How it works:
 ```css */
 pre {
   padding: 1rem 1.5rem;
   padding-inline-end: 2rem;
 
-  @media screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     border-radius: 0;
   }
 }

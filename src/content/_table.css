@@ -7,14 +7,12 @@ Place `<hr>` element inside `<th>` column to expand it horizontally:
 
 <article>
 
-| Column with `<hr>` <hr> | Same column without `<hr>` |
-| --- | --- |
+| Column with `<hr>`<hr> | Same column without `<hr>` | ... {style=width:100%} |
+| --- | --- | --- |
 | (012) 345-6789 | (012) 345-6789 |
-
-{style=max-width:30ch}
 </article>
 
-Living examples of big tables with `<hr>`-expanders:
+Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
 - https://blades.ninja/ai/ide/
 - https://blades.ninja/build-awesome-11ty/starters/
 - https://blades.ninja/css/frameworks/
@@ -22,20 +20,18 @@ Living examples of big tables with `<hr>`-expanders:
 
 <details>How it works:
 ```css */
-table {
-  th {
-    hr {
-      width: 12ch; /* min ~65/12 = ~5 cols */
-      height: 0;
-      margin: 0;
-      visibility: hidden;
+th {
+  hr {
+    width: 12ch; /* min ~65/12 = ~5 cols */
+    height: 0;
+    margin: 0;
+    visibility: hidden;
 
-      &.lg {
-        width: 18ch;
-      }
-      &.x2 {
-        width: 24ch;
-      }
+    &.lg {
+      width: 18ch;
+    }
+    &.x2 {
+      width: 24ch;
     }
   }
 }
@@ -50,7 +46,7 @@ table {
 
 | Less | borders |
 | ---- | ------- |
-| more | fun     |
+| More | fun     |
 
 {.borderless}
 </article>

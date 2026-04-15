@@ -70,13 +70,11 @@ ol {
       list-style-type: inherit;
     }
   }
-
   li[style*="--list-marker:"] {
     list-style-type: var(--list-marker);
   }
   li[data-marker]::marker {
-    /* ⚠️ `data-marker` works only in Chrome and Firefox */
-    content: attr(data-marker) " ";
+    content: attr(data-marker) " "; /* ⚠️ Chrome and Firefox only */
   }
 }
 /*```
@@ -84,7 +82,7 @@ ol {
 
 ### Unlist
 
-Helper class to remove list styling at all:
+`.unlist` removes list styling:
 
 <article>
 
@@ -94,6 +92,8 @@ Helper class to remove list styling at all:
 
 {.unlist .grid style=margin:0}
 </article>
+
+`.unlist-all` also removes styling from all nested lists.
 
 <details>How it works:
 ```css */

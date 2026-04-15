@@ -1,6 +1,5 @@
 /*
-<!--section:how-->
-<details>How it works:
+<!--section:code-->
 ```css */
 .breakout,
 .breakout-all {
@@ -83,8 +82,6 @@
   }
 }
 /*```
-</details>
-
 <!--section:summary-->
 
 The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
@@ -107,18 +104,14 @@ Or table:
 Or code block:
 
 ```html
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Quisquam, quod.
-</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 ```
 
 Or anything else:
 
 <article class="breakout-item-max" data-theme="dark">
 
-Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
-
+  Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
 </article>
 
 <div><hr></div>

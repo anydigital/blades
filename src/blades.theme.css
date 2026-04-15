@@ -1,6 +1,5 @@
 /*
-<!--section:docs-->
-<details>How it works:
+<!--section:code-->
 ```css */
 @import "./float-label.theme";
 
@@ -111,5 +110,4 @@ table {
   }
 }
 /*```
-</details>
 <!--section--> */
