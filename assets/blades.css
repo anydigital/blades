@@ -1,32 +1,30 @@
-/*** Follows https://github.com/picocss/pico/blob/main/scss/_index.scss ***/
+/* Follows https://github.com/picocss/pico/blob/main/scss/_index.scss */
 
 /* Layout */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-intro-->
-
-Global styles:
-```css */
-
-html {
-  /* Prevent horizontal overflow and scrolling, modern way. */
-  overflow-x: clip;
-}
-
-body {
-  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
-  min-height: 100dvh;
-}
-
-/*```
 <!--section:docs-->
 
 ### Auto-columns
+
+`.columns` automatically creates columns with at least 30 characters each:
+
+<article class="columns">
+  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p>
+</article>
+
+The smaller the font size, the more columns will be created:
+
+<article class="columns" style="font-size: 65%">
+  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+</article>
+
+Useful for tables of contents and long lists.
+
+<details>How it works:
 ```css */
 
-.columns,
-[data-is-toc] > ul,
-[data-is-toc] > ol {
+.columns {
   columns: 30ch auto; /* 2 cols max for 65ch container */
 
   /* Avoid breaking inside elements, such as nested lists */
@@ -36,10 +34,11 @@ body {
 }
 
 /*```
-
-Table of contents (`[data-is-toc]`) has auto-columns by default.
+</details>
 
 ### Jump to top
+
+`data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
 ```css */
 
 [data-jump-to="top"] {
@@ -47,17 +46,15 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
   bottom: 0;
   right: 0;
   padding-top: 50vh;
-  opacity: 25%;
-
-  &:hover {
-    opacity: 75%;
-  }
 }
 
 /*```
 <!--section--> */
 
-/* <!--section:code-->```css */
+/*
+<!--section:how-->
+<details>How it works:
+```css */
 
 .breakout,
 .breakout-all {
@@ -141,60 +138,67 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
 }
 
 /*```
-<!--section:docs,summary-->
+</details>
 
-Framework-agnostic utilities for breaking out images and figures beyond their container width.
+<!--section:summary-->
 
-Use the `.breakout` class to allow elements to extend beyond their parent container.
+The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
 
 <!--section:docs-->
 
+### Demo <!-- inside parent .breakout -->
+
+Break out a wide image from the text flow:
+
+<div><!-- Dummy div to avoid p tag in Markdown --></div><img
+  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3000' height='300'><rect width='100%' height='100%' fill='gray'/></svg>">
+
+Or table:
+
+| Imagine<hr> | a<hr> | really<hr> | wide<hr> | table<hr> | here<hr> |
+| ----------- | ----- | ---------- | -------- | --------- | -------- |
+| ...         |
+
+Or code block:
+
 ```html
-<div class="breakout">
-  <img src="image.jpg" alt="Description" />
-</div>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Quisquam, quod.
+</p>
 ```
 
-The breakout container has `10%` inline padding and a max-width of `calc(10% + 65ch + 10%)`. The breakout utilities support images, pictures, figures, canvas, audio, video, tables, pre, iframe, and other media elements. Tables inside `.breakout` are specifically enhanced for horizontal scrolling and full-bleed mobile display. This is automatically included when you import the stylesheet.
+Or anything else:
+
+<article class="breakout-item-max" data-theme="dark">
+
+Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
+
+</article>
+
+<div><hr></div>
+
+`.breakout-all` also visually breaks out headings and horizontal rules:
+
+<h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>
+<hr>
 
 <!--section--> */
 
 /* Content */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs-intro-->
-
-Global styles:
-```css */
-
-html {
-  /* Enable font smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
-  text-wrap: pretty;
-  /* Enable global hyphenation */
-  hyphens: auto;
-  /* ... except for links and tables which are better (safer) without hyphenation */
-  a,
-  table {
-    hyphens: none;
-  }
-}
-
-/*```
 <!--section:docs-->
 
 ### Heading anchors
 
-Set `data-is-anchor` attribute on anchors inside headings to position them absolutely, and show only on hover (when supported):
+Links with `href="#..."` inside headings are automatically displayed as anchors:
 
-<article><h2>Heading with anchor <a href="#hwa" data-is-anchor>#</a></h2></article>
+<article>
+  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
+</article>
 
-How it works:
+<details>How it works:
 ```css */
 
 h1,
@@ -205,7 +209,7 @@ h5,
 h6 {
   position: relative;
 
-  [data-is-anchor] {
+  a[href^="#"] {
     position: absolute;
     right: 100%;
     top: 50%;
@@ -215,10 +219,9 @@ h6 {
     text-decoration: none;
     visibility: hidden;
   }
-  /* Avoid double-tap on touch devices */
-  @media (hover: hover) {
+  @media /* to avoid double-tap on touch devices */ (hover: hover) {
     &:hover {
-      [data-is-anchor] {
+      a[href^="#"] {
         visibility: visible;
       }
     }
@@ -226,22 +229,28 @@ h6 {
 }
 
 /*```
-> **PRO-TIP** for 11ty + markdown-it-anchor: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+</details>
+
+**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
 
 ### List markers
 
-Use inline `style="--list-marker:'🥷 '"` on `<ul>/<ol>` or even individual `<li>` to customize list markers:
+Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
+
 <article>
 
-- Customize
-- list
-- markers
-- with [Blades CSS](https://blades.ninja/css/) {style="--list-marker:'🥷 '"}
+- you
+- can
+- make
+- really
+- cool markers {style="--list-marker:'🧊 '"}
+- with
+- *Bl*ades {style="--list-marker:'🥷 '"}
 
-{style="--list-marker:'🧊 '"}
+{style="--list-marker:'→ '"}
 </article>
 
-How it works:
+<details>How it works:
 ```css */
 
 ul,
@@ -264,10 +273,22 @@ ol {
 }
 
 /*```
+</details>
 
 ### Unlist
 
 Helper class to remove list styling at all:
+
+<article>
+
+- One: <article>1</article>
+- Two: <article>2</article>
+- Three: <article>3</article>
+
+{.unlist .grid style=margin:0}
+</article>
+
+<details>How it works:
 ```css */
 
 ul,
@@ -284,10 +305,12 @@ ol {
 }
 
 /*```
+</details>
 <!--section--> */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:code-->
+<!--section:how-->
+<details>How it works:
 ```css */
 
 a {
@@ -323,54 +346,58 @@ a {
 }
 
 /*```
-> **PRO-TIP** for 11ty: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+</details>
 
-<!--section:docs,summary-->
+How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
 
-Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
+**PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+
+<!--section:summary-->
+
+Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
 
 <!--section:docs-->
 
-Compare:
+<article class="breakout-item">
 
-| Without Blades <hr class="lg">                                                                          | With Blades' `<i>`-helper <hr class="lg">                                                                      | Clean HTML without `<span>ning` <hr class="x2"> |
-| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [🥷 Link with emoji](#)                                                                                 | [<i>🥷</i> Link with emoji](#)                                                                                 | `<a><i>🥷</i> Text</a>`                         |
-| [![](https://www.google.com/s2/favicons?domain=any.digital&sz=64) Multi-line link <br> with favicon](#) | [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Multi-line link <br> with favicon](#) | `<a><i><img src="..."></i> Text</a>`            |
-| [<b class="fa-brands fa-github fa-lg"></b> Link with Font Awesome icon](#)                              | [<i class="fa-brands fa-github fa-lg"></i> Link with Font Awesome icon](#)                                     | `<a><i class="fa-..."></i> Text</a>`            |
+| Use `<i>`-helper with                                                                 | Clean HTML without `<span>ning`      |
+| ------------------------------------------------------------------------------------- | ------------------------------------ |
+| [<i>🥷</i> Emojis](#)                                                                 | `<a><i>🥷</i> Text</a>`              |
+| [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Favicons](#) | `<a><i><img src="..."></i> Text</a>` |
+| [<i class="fa-brands fa-github fa-lg"></i> Font Awesome icons](#)                     | `<a><i class="fa-..."></i> Text</a>` |
+</article>
 
----
+Or even:
 
-[How we made it ↗ &nbsp;<small>(on Codepen)</small>](https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237){role=button .outline}
+<article>
+  <a href="#" style="margin: 0 0 0 1rem"><i>🥷</i> very-very-very-very-very-<br>long-multiline-links</a>
+</article>
 
 <!--section--> */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
 <!--section:docs-->
 
-### Horizontal expanders
+### Column expanders
 
-Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especially useful in markdown):
-```html
-<th>Col <hr></th>
-```
-Example table before:
-<article class="overflow-auto"><table>
-  <tr><th>Wide tables</th><th>with many</th><th>columns might</th><th>get collapsed</th><th>and be really</th><th>hard to read!</th></tr>
-</table></article>
+Place `<hr>` element inside `<th>` column to expand it horizontally:
 
-Same table after adding `<hr>`-expanders:
-<article class="overflow-auto"><table>
-  <tr><th>Wide tables <hr></th><th>with many <hr></th><th>columns might <hr></th><th>get collapsed <hr></th><th>and be really <hr></th><th>hard to read! <hr></th></tr>
-</table></article>
+<article>
+
+| Column with `<hr>` <hr> | Same column without `<hr>` |
+| --- | --- |
+| (012) 345-6789 | (012) 345-6789 |
+
+{style=max-width:30ch}
+</article>
 
 Living examples of big tables with `<hr>`-expanders:
-- https://any.digital/insights/ai-ide/
-- https://any.digital/insights/css-frameworks/
-- https://any.digital/insights/ssg/
-- https://blades.ninja/build-awesome-11ty/#min-starters
+- https://blades.ninja/ai/ide/
+- https://blades.ninja/build-awesome-11ty/starters/
+- https://blades.ninja/css/frameworks/
+- https://blades.ninja/ssg/
 
-How it works:
+<details>How it works:
 ```css */
 
 table {
@@ -392,9 +419,11 @@ table {
 }
 
 /*```
+</details>
+
 ### Borderless table
 
-`<table class="borderless">` removes all default borders:
+`.borderless` removes all default borders:
 
 <article>
 
@@ -416,7 +445,9 @@ table.borderless {
   }
 }
 
-/* <!--section:code-->
+/*
+<!--section:how-->
+<details>How it works:
 ```css */
 
 table.responsive,
@@ -444,16 +475,19 @@ table.responsive,
 }
 
 /*```
-<!--#TODO:css-blade-->
-Soft-increase selector specificity trick:
+</details>
 
-`table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
+`table:not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 
-<!--section:docs,summary-->
+<!--section:summary-->
 
-`<table class="responsive">` allows a table to full-bleed and scroll on mobile.
+`.responsive` makes a table full-bleed and scroll on mobile, without a need for a redundant wrapper (finally).
+
+Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
 <!--section:docs-->
+
+### Demo table
 
 | Term              | Description <hr class="x2">                                                                                                                                                                  | Link                                                |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
@@ -463,20 +497,29 @@ Soft-increase selector specificity trick:
 
 ---
 
-Tables inside https://blades.ninja/css/breakout/ are responsive by default.
+Living examples: <!--A-Z-->
 
-Living examples:
-
-- https://any.digital/insights/ai-ide/
-- https://any.digital/insights/css-frameworks/
-- https://any.digital/insights/ssg/
-- https://blades.ninja/build-awesome-11ty/#min-starters
+- https://blades.ninja/ai/ide/
+- https://blades.ninja/build-awesome-11ty/starters/
+- https://blades.ninja/css/frameworks/
+- https://blades.ninja/ssg/
 
 <!--section--> */
 
-/* <!--section:docs-->
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
+<!--section:docs-->
+
 ### Code
-Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
+
+The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
+
+```treeview {data-caption="Key Blades CSS files:"}
+├── blades.core.css     # reusable class-light utilities, unthemed
+├── blades.theme.css    # minimal opinionated theme
+└── blades.css          # above two together
+```
+
+<details>How it works:
 ```css */
 
 pre {
@@ -505,7 +548,7 @@ code {
   }
 }
 
-/*** Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css ***/
+/* Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css */
 
 .token.treeview-part {
   .entry-line {
@@ -521,7 +564,9 @@ code {
   }
 }
 
-/*``` <!--section--> */
+/*```
+</details>
+<!--section--> */
 
 /* Forms */
 
@@ -574,49 +619,75 @@ Historically, this was not possible: the float label had to be placed after the 
 
 /* Utilities */
 
-/*
+/* Extends https://github.com/picocss/pico/tree/main/scss/utilities
 <!--section:docs-->
 
 ### Auto-dark
+
+`.dark-auto` automatically creates a simple dark version of any element:
+
+<article data-theme="dark">
+  <p>Look how cool <big class="dark-auto">🔥🕷️🐦‍⬛🐄🦓</big> can look in the dark!</p>
+</article>
+
+<details>How it works:
 ```css */
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    .dark-auto {
-      filter: invert(100%) hue-rotate(180deg);
-    }
+/* Per https://picocss.com/docs/css-variables#css-variables-for-color-schemes */
+
+:root {
+  --blades-dark-filter: invert(100%) hue-rotate(180deg);
+}
+
+.dark-auto {
+  /* Dark color scheme (Auto) */
+  @media (prefers-color-scheme: dark) {
+    filter: var(--blades-dark-filter);
+  }
+  /* Dark color scheme (Forced) */
+  &[data-theme="dark"],
+  &:where([data-theme="dark"] *) {
+    filter: var(--blades-dark-filter);
   }
 }
 
 /*```
+</details>
 
 ### Faded
+
+`.faded` reduces the opacity of an element:
+
+<article class="faded">
+  Hover to unfade me!
+</article>
+
+<details>How it works:
 ```css */
 
 .faded {
   opacity: 50%;
+
   &:hover {
     opacity: 87.5%;
   }
 }
 
 /*```
+</details>
+<!--section--> */
 
-### Invert
-```css */
-
-/* Extends https://tailwindcss.com/docs/filter-invert */
+/* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */
 
 .invert {
-  /* Fix the scrollbar color when inverted */
   ::-webkit-scrollbar {
     filter: invert(1) !important;
   }
 }
 
-/*``` <!--section--> */
-
-/* <!--section:code-->
+/*
+<!--section:docs-->
+<details>How it works:
 ```css */
 
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
@@ -651,18 +722,42 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
   }
 }
 
+html {
+  /* Prevent horizontal overflow and scrolling, modern way. */
+  overflow-x: clip;
+
+  /* Enable font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
+  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
+  min-height: 100dvh;
+
   /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
   display: flex;
   flex-direction: column;
   > main {
     flex-grow: 1;
   }
+
+  /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
+  text-wrap: pretty;
+
+  /* Enable global hyphenation */
+  hyphens: auto;
+  /* ... except for links and tables which are better (safer) without hyphenation */
+  a,
+  table {
+    hyphens: none;
+  }
 }
 
 a {
   &:not([href^="#"]) {
     text-decoration-thickness: 1px;
+
     &:hover {
       text-decoration-thickness: 2px;
     }
@@ -673,23 +768,6 @@ h1 {
   font-size: 2.5em; /* for pico.css & tw-typography */
   margin-bottom: 1rem; /* for tw-typography */
 }
-
-/* Potential fix https://github.com/picocss/pico/blob/main/css/pico.css for the very first headings
-:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
-  margin-top: var(--pico-typography-spacing-top);
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  & ~ & {
-    margin-bottom: 2rem;
-  }
-}
-NOTE: be careful with wrapped headings, i.e. inside nav: https://blades.ninja/build-awesome-11ty/#usage
-*/
 
 hr {
   margin-block: 2em; /* for pico.css & tw-typography */
@@ -722,6 +800,11 @@ table {
 }
 
 [data-jump-to="top"] {
+  opacity: 25%;
+  &:hover {
+    opacity: 75%;
+  }
+
   > i {
     display: inline-block;
     padding: 0.25rem 0.375rem;
@@ -729,17 +812,6 @@ table {
     font-size: 0.75rem;
     color: black;
     border-color: black;
-  }
-}
-
-[data-is-toc] {
-  font-size: 87.5%;
-
-  a {
-    text-decoration: none;
-  }
-  > ul > * > a {
-    font-weight: 500;
   }
 }
 
@@ -758,4 +830,5 @@ table {
 }
 
 /*```
+</details>
 <!--section--> */

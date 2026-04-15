@@ -1,4 +1,7 @@
-/* <!--section:code-->```css */
+/*
+<!--section:how-->
+<details>How it works:
+```css */
 .breakout,
 .breakout-all {
   /* Prepare the container for breakout elements */
@@ -79,20 +82,49 @@
   }
 }
 /*```
-<!--section:docs,summary-->
+</details>
 
-Framework-agnostic utilities for breaking out images and figures beyond their container width.
+<!--section:summary-->
 
-Use the `.breakout` class to allow elements to extend beyond their parent container.
+The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
 
 <!--section:docs-->
 
+### Demo <!-- inside parent .breakout -->
+
+Break out a wide image from the text flow:
+
+<div><!-- Dummy div to avoid p tag in Markdown --></div><img
+  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3000' height='300'><rect width='100%' height='100%' fill='gray'/></svg>">
+
+Or table:
+
+| Imagine<hr> | a<hr> | really<hr> | wide<hr> | table<hr> | here<hr> |
+| ----------- | ----- | ---------- | -------- | --------- | -------- |
+| ...         |
+
+Or code block:
+
 ```html
-<div class="breakout">
-  <img src="image.jpg" alt="Description" />
-</div>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Quisquam, quod.
+</p>
 ```
 
-The breakout container has `10%` inline padding and a max-width of `calc(10% + 65ch + 10%)`. The breakout utilities support images, pictures, figures, canvas, audio, video, tables, pre, iframe, and other media elements. Tables inside `.breakout` are specifically enhanced for horizontal scrolling and full-bleed mobile display. This is automatically included when you import the stylesheet.
+Or anything else:
+
+<article class="breakout-item-max" data-theme="dark">
+
+Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
+
+</article>
+
+<div><hr></div>
+
+`.breakout-all` also visually breaks out headings and horizontal rules:
+
+<h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>
+<hr>
 
 <!--section--> */
