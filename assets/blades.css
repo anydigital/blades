@@ -52,8 +52,7 @@ Useful for tables of contents and long lists.
 <!--section--> */
 
 /*
-<!--section:how-->
-<details>How it works:
+<!--section:code-->
 ```css */
 
 .breakout,
@@ -138,8 +137,6 @@ Useful for tables of contents and long lists.
 }
 
 /*```
-</details>
-
 <!--section:summary-->
 
 The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
@@ -162,18 +159,14 @@ Or table:
 Or code block:
 
 ```html
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Quisquam, quod.
-</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 ```
 
 Or anything else:
 
 <article class="breakout-item-max" data-theme="dark">
 
-Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
-
+  Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
 </article>
 
 <div><hr></div>
@@ -262,13 +255,11 @@ ol {
       list-style-type: inherit;
     }
   }
-
   li[style*="--list-marker:"] {
     list-style-type: var(--list-marker);
   }
   li[data-marker]::marker {
-    /* ⚠️ `data-marker` works only in Chrome and Firefox */
-    content: attr(data-marker) " ";
+    content: attr(data-marker) " "; /* ⚠️ Chrome and Firefox only */
   }
 }
 
@@ -277,7 +268,7 @@ ol {
 
 ### Unlist
 
-Helper class to remove list styling at all:
+`.unlist` removes list styling:
 
 <article>
 
@@ -287,6 +278,8 @@ Helper class to remove list styling at all:
 
 {.unlist .grid style=margin:0}
 </article>
+
+`.unlist-all` also removes styling from all nested lists.
 
 <details>How it works:
 ```css */
@@ -309,8 +302,7 @@ ol {
 <!--section--> */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:how-->
-<details>How it works:
+<!--section:code-->
 ```css */
 
 a {
@@ -346,15 +338,14 @@ a {
 }
 
 /*```
-</details>
-
 How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
 
 **PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
 <!--section:summary-->
 
-Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons.
+Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links.
+It automatically handles sizing and alignment while preventing underline on icons.
 
 <!--section:docs-->
 
@@ -367,7 +358,7 @@ Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome 
 | [<i class="fa-brands fa-github fa-lg"></i> Font Awesome icons](#)                     | `<a><i class="fa-..."></i> Text</a>` |
 </article>
 
-Or even:
+Or even for:
 
 <article>
   <a href="#" style="margin: 0 0 0 1rem"><i>🥷</i> very-very-very-very-very-<br>long-multiline-links</a>
@@ -384,14 +375,12 @@ Place `<hr>` element inside `<th>` column to expand it horizontally:
 
 <article>
 
-| Column with `<hr>` <hr> | Same column without `<hr>` |
-| --- | --- |
+| Column with `<hr>`<hr> | Same column without `<hr>` | ... {style=width:100%} |
+| --- | --- | --- |
 | (012) 345-6789 | (012) 345-6789 |
-
-{style=max-width:30ch}
 </article>
 
-Living examples of big tables with `<hr>`-expanders:
+Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
 - https://blades.ninja/ai/ide/
 - https://blades.ninja/build-awesome-11ty/starters/
 - https://blades.ninja/css/frameworks/
@@ -400,20 +389,18 @@ Living examples of big tables with `<hr>`-expanders:
 <details>How it works:
 ```css */
 
-table {
-  th {
-    hr {
-      width: 12ch; /* min ~65/12 = ~5 cols */
-      height: 0;
-      margin: 0;
-      visibility: hidden;
+th {
+  hr {
+    width: 12ch; /* min ~65/12 = ~5 cols */
+    height: 0;
+    margin: 0;
+    visibility: hidden;
 
-      &.lg {
-        width: 18ch;
-      }
-      &.x2 {
-        width: 24ch;
-      }
+    &.lg {
+      width: 18ch;
+    }
+    &.x2 {
+      width: 24ch;
     }
   }
 }
@@ -429,7 +416,7 @@ table {
 
 | Less | borders |
 | ---- | ------- |
-| more | fun     |
+| More | fun     |
 
 {.borderless}
 </article>
@@ -446,8 +433,7 @@ table.borderless {
 }
 
 /*
-<!--section:how-->
-<details>How it works:
+<!--section:code-->
 ```css */
 
 table.responsive,
@@ -475,14 +461,11 @@ table.responsive,
 }
 
 /*```
-</details>
-
 `table:not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 
 <!--section:summary-->
 
 `.responsive` makes a table full-bleed and scroll on mobile, without a need for a redundant wrapper (finally).
-
 Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
 <!--section:docs-->
@@ -498,7 +481,6 @@ Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 ---
 
 Living examples: <!--A-Z-->
-
 - https://blades.ninja/ai/ide/
 - https://blades.ninja/build-awesome-11ty/starters/
 - https://blades.ninja/css/frameworks/
@@ -513,12 +495,12 @@ Living examples: <!--A-Z-->
 
 The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
 
-```treeview {data-caption="Key Blades CSS files:"}
+```treeview {data-caption="Blades CSS:"}
+./assets/
 ├── blades.core.css     # reusable class-light utilities, unthemed
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-
 <details>How it works:
 ```css */
 
@@ -526,7 +508,7 @@ pre {
   padding: 1rem 1.5rem;
   padding-inline-end: 2rem;
 
-  @media screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     border-radius: 0;
   }
 }
@@ -686,8 +668,7 @@ Historically, this was not possible: the float label had to be placed after the 
 }
 
 /*
-<!--section:docs-->
-<details>How it works:
+<!--section:code-->
 ```css */
 
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
@@ -830,5 +811,4 @@ table {
 }
 
 /*```
-</details>
 <!--section--> */

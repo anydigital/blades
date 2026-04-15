@@ -1,6 +1,5 @@
 /*
-<!--section:docs-->
-<details>How it works:
+<!--section:code-->
 ```css */
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
@@ -130,5 +129,4 @@ table {
   }
 }
 /*```
-</details>
 <!--section--> */
