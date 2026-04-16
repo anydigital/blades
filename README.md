@@ -93,19 +93,24 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 
 </article><br>
 
-- **Featured by:**
-  - https://github.com/uhub/awesome-css
-  - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
-  - https://11tybundle.dev/blog/11ty-bundle-88/
-  - [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
-  - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
-  - ✨ [pico.css](https://github.com/anyblades/pico) community fork
-  - 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
-  - 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
-  - https://fosstodon.org/@pauleveritt/116387278969347700
+**Featured by:**
 
-- **Credits:**
-  - https://picocss.com/ for inspiration
-  - https://11ty.dev/ for build power
+- https://github.com/uhub/awesome-css
+- https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
+- https://github.com/anyblades/awesome-11ty-build-awesome
+- https://11tybundle.dev/blog/11ty-bundle-88/
+- [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
+- [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
+- ✨ [pico.css](https://github.com/anyblades/pico) community fork
+- 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
+- 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
+- https://fosstodon.org/@pauleveritt/116387278969347700
 
-<!--{.unlist-all .columns}-->
+<!--{.unlist .columns}-->
+
+**Credits:**
+
+- https://picocss.com/ for inspiration
+- https://11ty.dev/ for build power
+
+<!--{.unlist .columns}-->
