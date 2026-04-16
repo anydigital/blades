@@ -16,7 +16,7 @@
 
 <!--section:docs,toc-->
 <!-- ToC from https://blades.ninja/css/ with `href="/css/#` instead of `href="#` -->
-<ul class="unlist columns"><li><a href="/css/#install" tabindex="-1">Install</a></li>
+<ul class="columns"><li><a href="/css/#install" tabindex="-1">Install</a></li>
 <li><a href="/css/#layout" tabindex="-1">Layout</a><ul><li><a href="/css/#breakout">Breakout layout</a></li>
 <li><a href="/css/#auto-columns" tabindex="-1">Auto-columns</a></li>
 <li><a href="/css/#jump-to-top" tabindex="-1">Jump to top</a></li></ul></li>
@@ -93,7 +93,7 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 
 </article><br>
 
-**Featured by:**
+##### Featured by:
 
 - https://github.com/uhub/awesome-css
 - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
@@ -108,7 +108,7 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 
 <!--{.unlist .columns}-->
 
-**Credits:**
+##### Credits:
 
 - https://picocss.com/ for inspiration
 - https://11ty.dev/ for build power
