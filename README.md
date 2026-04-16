@@ -96,7 +96,6 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 - **Featured by:**
   - https://github.com/uhub/awesome-css
   - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
-  - https://github.com/anyblades/awesome-11ty-build-awesome
   - https://11tybundle.dev/blog/11ty-bundle-88/
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
   - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
@@ -104,11 +103,6 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
   - 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
   - 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
   - https://fosstodon.org/@pauleveritt/116387278969347700
-
-- **Hidden built-ins:**
-  - https://blades.ninja/css/pico/ community fork
-  - https://blades.ninja/html/ templates
-  - https://blades.ninja/jekyll/ theme
 
 - **Credits:**
   - https://picocss.com/ for inspiration
