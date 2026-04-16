@@ -16,7 +16,7 @@
 
 <!--section:docs,toc-->
 <!-- ToC from https://blades.ninja/css/ with `href="/css/#` instead of `href="#` -->
-<ul class="columns"><li><a href="/css/#install" tabindex="-1">Install</a></li>
+<ul class="unlist columns"><li><a href="/css/#install" tabindex="-1">Install</a></li>
 <li><a href="/css/#layout" tabindex="-1">Layout</a><ul><li><a href="/css/#breakout">Breakout layout</a></li>
 <li><a href="/css/#auto-columns" tabindex="-1">Auto-columns</a></li>
 <li><a href="/css/#jump-to-top" tabindex="-1">Jump to top</a></li></ul></li>
@@ -31,7 +31,7 @@
 <li><a href="/css/#forms" tabindex="-1">Forms</a><ul><li><a href="/css/#float-label">Float label CSS</a></li></ul></li>
 <li><a href="/css/#utilities" tabindex="-1">Utilities</a><ul><li><a href="/css/#auto-dark" tabindex="-1">Auto-dark</a></li>
 <li><a href="/css/#faded" tabindex="-1">Faded</a></li></ul></li>
-<li><a href="/css/#appendix" tabindex="-1">Appendix</a><ul><li><a href="/css/#pico">Pico CSS ✨</a></li></ul></li></ul>
+<li><a href="/css/#appendix" tabindex="-1">Appendix</a><ul><li><a href="/css/#pico">Pico CSS <i>✨</i></a></li></ul></li></ul>
 <!--section:gh-only-->
 
 ---
@@ -81,7 +81,19 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 ---
 
-- Featured by:
+## Showcase
+
+<article class="breakout-item-max">
+
+https://any.digital/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
+https://build.blades.ninja/<!--{data-tooltip="Tailwind 💨+🥷 Blades"}-->
+https://bladeswitch.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
+https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
+[<i class="fa-solid fa-plus faded"></i>](https://github.com/anyblades/blades/edit/main/README.md)<!--{data-tooltip="add yours!" data-placement=bottom}-->
+
+</article><br>
+
+- **Featured by:**
   - https://github.com/uhub/awesome-css
   - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
   - https://github.com/anyblades/awesome-11ty-build-awesome
@@ -92,13 +104,12 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
   - 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
   - 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
 
-- Showcase:
-  - <abbr data-tooltip="Pico CSS + Blades">✨+🥷</abbr> = https://any.digital/
-  - <abbr data-tooltip="Tailwind CSS + Typography plugin + Blades">💨+🥷</abbr> = https://build.blades.ninja/
-  - <abbr data-tooltip="Pico CSS + Blades">✨+🥷</abbr> = https://bladeswitch.com/
-  - <abbr data-tooltip="Pico CSS + Blades">✨+🥷</abbr> = https://minform.hostfurl.com/
+- **Hidden built-ins:**
+  - https://blades.ninja/css/pico/ community fork
+  - https://blades.ninja/html/ templates
+  - https://blades.ninja/jekyll/ theme
 
-- Credits:
+- **Credits:**
   - https://picocss.com/ for inspiration
   - https://11ty.dev/ for build power
 
