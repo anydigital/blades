@@ -86,7 +86,7 @@ https://build.blades.ninja/<!--{data-tooltip="Tailwind 💨+🥷 Blades"}-->
 https://blades.ninja/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 https://bladeswitch.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
-[<i class="fa-solid fa-plus faded"></i>](https://github.com/anyblades/blades/edit/main/README.md)<!--{data-tooltip="Add yours!"}-->
+[<i class="fa-solid fa-plus faded"></i>](https://github.com/anyblades/blades/edit/main/README.md)<!--{data-tooltip="Add yours!" data-placement=bottom}-->
 
 </article>
 
