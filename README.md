@@ -77,8 +77,6 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 ## Info <!--{hidden}-->
 
----
-
 ### Showcase
 
 <article class="breakout-item-max"><!--A-Z-->
