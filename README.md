@@ -2,7 +2,7 @@
 
 <!--section:summary-->
 
-<hgroup>Framework-agnostic,<wbr> class-light CSS utilities <wbr> <small>(or simply “*Bl*ades”).</small></hgroup>
+<hgroup>Framework-agnostic,<wbr> class-light CSS utilities <wbr> <small>(or simply “*Bl*ades”)</small></hgroup>
 
 <big>Use with Tailwind, Bootstrap, Pico, Simple, or any other reset/framework.</big>
 
