@@ -2,7 +2,7 @@
 
 <!--section:summary-->
 
-<hgroup>Framework-agnostic,<wbr> class-light CSS <small>“*Bl*ades”</small> utilities</hgroup>
+<hgroup>Framework-agnostic,<wbr> class-light <span data-tooltip="or simply “Blades”" data-placement="bottom">CSS utilities</span></hgroup>
 
 <big>Use with Tailwind, Bootstrap, Pico, Simple, or any other reset/framework.</big>
 
