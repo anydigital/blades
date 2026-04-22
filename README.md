@@ -75,9 +75,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <!--section:info-->
 
-## Info <!--{hidden}-->
-
-### Featured by <!--A-Z-->
+## <sup>Featured by</sup><!--A-Z-->
 
 - [https://fosstodon.org/@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
@@ -88,14 +86,14 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <!--{.unlist .columns}-->
 
-### Credits
+## <sup>Credits</sup>
 
 - https://picocss.com/ for inspiration
 - https://11ty.dev/ for build power
 
 <!--{.unlist .columns}-->
 
-### Showcase
+## <sup>Showcase</sup>
 
 <article class="breakout-item-max"><!--A-Z-->
 
