@@ -1,5 +1,5 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-->
+<!--section:columns-->
 
 ### Auto-columns
 
@@ -17,7 +17,7 @@ The smaller the font size, the more columns will be created:
 
 Useful for tables of contents and long lists.
 
-<details>How it works:
+How it works:
 ```css */
 .columns {
   columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
@@ -28,7 +28,7 @@ Useful for tables of contents and long lists.
   }
 }
 /*```
-</details>
+<!--section:jump-->
 
 ### Jump to top
 
