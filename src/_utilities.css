@@ -9,7 +9,7 @@
   <p>Look how cool <big class="dark-auto">🔥🕷️🐦‍⬛🐄🦓</big> can look in the dark!</p>
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 /* Per https://picocss.com/docs/css-variables#css-variables-for-color-schemes */
 :root {
@@ -27,7 +27,6 @@
   }
 }
 /*```
-</details>
 
 ### Faded
 
@@ -37,7 +36,7 @@
   Hover to unfade me!
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 .faded {
   opacity: 50%;
@@ -47,7 +46,6 @@
   }
 }
 /*```
-</details>
 <!--section--> */
 
 /* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */

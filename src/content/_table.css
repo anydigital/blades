@@ -18,7 +18,7 @@ Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
 - https://blades.ninja/css/frameworks/
 - https://blades.ninja/ssg/
 
-<details>How it works:
+How it works:
 ```css */
 th {
   hr {
@@ -36,7 +36,6 @@ th {
   }
 }
 /*```
-</details>
 
 ### Borderless table
 

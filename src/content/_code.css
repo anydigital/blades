@@ -11,7 +11,7 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-<details>How it works:
+How it works:
 ```css */
 pre {
   padding: 1rem 1.5rem;
@@ -54,5 +54,4 @@ code {
   }
 }
 /*```
-</details>
 <!--section--> */
