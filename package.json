@@ -4,11 +4,10 @@
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
   "style": "./assets/blades.css",
   "exports": {
-    ".": "./src/blades.css",
-    "./core": "./src/blades.core.css",
-    "./theme": "./src/blades.theme.css",
-    "./float-label": "./src/float-label.css",
-    "./pico": "./src/pico.blades.css"
+    ".": "./src/blades.standalone.css",
+    "./core": "./src/blades.standalone.core.css",
+    "./theme": "./src/blades.standalone.theme.css",
+    "./float-label": "./src/float-label.css"
   },
   "scripts": {
     "postcss": "postcss './src/!(_)*.css' --dir ./assets",

@@ -1,2 +1,6 @@
-@import "./blades.core";
-@import "./blades.theme";
+/*!
+ * Pico+Blades CSS ✨🥷
+ * Copyright 2026 - Licensed under MIT
+ */
+@import "@anyblades/pico";
+@import "./blades.standalone";
