@@ -38,42 +38,67 @@ Includes [Float labels](https://blades.ninja/css/float-label/), [Breakout layout
 
 ---
 
+## Quick start
+
 <!--section:install-->
 
-## Install
+There are 4 ways to get started:
 
-###### <mark>Via CDN</mark>
+### Install manually
+
+[Download *Bl*ades](https://github.com/anyblades/pico/archive/refs/heads/main.zip) and link `assets/blades.css` in the `<head>` of your website.
+
+```html
+<link rel="stylesheet" href="assets/blades.css" />
+```
+
+### Usage from CDN
+
+Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@0/) to link `blades.min.css`:
 
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
   https://cdn.jsdelivr.net/npm/@anyblades/blades@0/assets/blades.min.css
-">
+"/>
 ```
 
-###### <mark>Via npm</mark>
+Living examples: https://github.com/anyblades/subtle/blob/main/.subtle/package.json
+
+### Install with NPM
 
 ```sh
-npm install @anyblades/blades
+npm install @anyblades/blades @anyblades/pico
 ```
 
-Then in your `.css`:
+Then, import Pico and *Bl*ades into your CSS:
 
 ```css
+@import "@anyblades/pico";
 @import "@anyblades/blades";
 ```
 
 Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_styles/styles.css
 
-###### <mark>Preconfigured</mark>
+### Starter HTML template <!-- from index.html -->
 
-- Pico: https://github.com/anyblades/pico
-- 11ty: https://github.com/anyblades/build-awesome-starter
-- Jekyll: https://github.com/anyblades/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
-
-###### Theme <small>(optional)</small>
-
-`blades.css` includes default minimal styling; use `blades.core.css` to opt-out.
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="assets/blades.css" />
+    <title>Hello world!</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Hello world!</h1>
+    </main>
+  </body>
+</html>
+```
 
 <!--section:info-->
 
