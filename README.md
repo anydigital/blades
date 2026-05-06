@@ -2,7 +2,7 @@
 
 <!--section:summary-->
 
-# <mark>Minimal CSS&nbsp;Framework</mark> <wbr> for Semantic&nbsp;HTML
+<h1><mark>Minimal CSS&nbsp;Framework</mark> <wbr> for Semantic&nbsp;HTML</h1>
 
 <big>Fully compatible and actively maintained successor to Pico CSS.</big>
 
